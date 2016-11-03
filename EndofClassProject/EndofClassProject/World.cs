@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace WeilandR_HW7_3
+namespace EndofClassProject
 {
     class World
     {

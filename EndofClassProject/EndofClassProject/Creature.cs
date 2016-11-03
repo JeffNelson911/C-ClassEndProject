@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Drawing;
 
-namespace WeilandR_HW7_3
+namespace EndofClassProject
 {
     public class Creature
     {
