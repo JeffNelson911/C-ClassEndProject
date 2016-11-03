@@ -13,7 +13,7 @@ namespace EndofClassProject
 
         public World()
         {
-            //this is the base room in our world.
+            //this is gonna need to be replaced later, but for now this is okay.
             Room room0 = new Room();
             Room room1 = new Room();
             Room room2 = new Room();
