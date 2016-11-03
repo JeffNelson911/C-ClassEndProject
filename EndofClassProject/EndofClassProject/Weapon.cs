@@ -4,7 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespaceEndofClassProject
+namespace EndofClassProject
+{
     public class Weapon:Item
     {
         public int attackValue { get; set; }
