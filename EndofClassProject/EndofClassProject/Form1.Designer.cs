@@ -68,6 +68,7 @@
             this.mobListBox = new System.Windows.Forms.ListBox();
             this.roomNameLabel = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.questLogButton = new System.Windows.Forms.Button();
             this.combatLogGroupbox.SuspendLayout();
             this.combatGroupbox.SuspendLayout();
             this.equipmentGroupbox.SuspendLayout();
@@ -476,11 +477,22 @@
             this.label1.TabIndex = 10;
             this.label1.Text = "Room:";
             // 
+            // questLogButton
+            // 
+            this.questLogButton.Location = new System.Drawing.Point(181, 11);
+            this.questLogButton.Name = "questLogButton";
+            this.questLogButton.Size = new System.Drawing.Size(75, 23);
+            this.questLogButton.TabIndex = 16;
+            this.questLogButton.Text = "Quest Log";
+            this.questLogButton.UseVisualStyleBackColor = true;
+            this.questLogButton.Click += new System.EventHandler(this.questLogButton_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1022, 487);
+            this.Controls.Add(this.questLogButton);
             this.Controls.Add(this.submitButton);
             this.Controls.Add(this.commandTextBox);
             this.Controls.Add(this.combatLogGroupbox);
@@ -548,6 +560,7 @@
         private System.Windows.Forms.ListBox mobListBox;
         private System.Windows.Forms.Label roomNameLabel;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button questLogButton;
     }
 }
 

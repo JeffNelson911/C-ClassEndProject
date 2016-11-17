@@ -16,5 +16,11 @@ namespace EndofClassProject
         {
             InitializeComponent();
         }
+
+        private void returnButton_Click(object sender, EventArgs e)
+        {
+            //Close the form.
+            this.Close();
+        }
     }
 }

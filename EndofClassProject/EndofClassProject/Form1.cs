@@ -16,5 +16,13 @@ namespace EndofClassProject
         {
             InitializeComponent();
         }
+
+        private void questLogButton_Click(object sender, EventArgs e)
+        {
+            Form1 form = new Form1();
+            QuestLog questLog = new QuestLog();
+            questLog.ShowDialog();
+            
+        }
     }
 }

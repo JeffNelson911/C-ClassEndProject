@@ -52,10 +52,13 @@
             this.returnButton.TabIndex = 1;
             this.returnButton.Text = "Return";
             this.returnButton.UseVisualStyleBackColor = true;
+            this.returnButton.Click += new System.EventHandler(this.returnButton_Click);
             // 
             // questLogTextBox
             // 
+            this.questLogTextBox.BackColor = System.Drawing.Color.White;
             this.questLogTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.questLogTextBox.Enabled = false;
             this.questLogTextBox.Location = new System.Drawing.Point(210, 25);
             this.questLogTextBox.Name = "questLogTextBox";
             this.questLogTextBox.ReadOnly = true;
