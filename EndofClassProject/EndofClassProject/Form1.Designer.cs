@@ -86,6 +86,7 @@
             this.submitButton.TabIndex = 15;
             this.submitButton.Text = "&Submit";
             this.submitButton.UseVisualStyleBackColor = true;
+            this.submitButton.Click += new System.EventHandler(this.submitButton_Click);
             // 
             // commandTextBox
             // 
@@ -489,6 +490,7 @@
             // 
             // Form1
             // 
+            this.AcceptButton = this.submitButton;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1022, 487);

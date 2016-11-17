@@ -12,6 +12,7 @@ namespace EndofClassProject
 {
     public partial class Form1 : Form
     {
+        Command com = new Command();
         public Form1()
         {
             InitializeComponent();
@@ -23,6 +24,11 @@ namespace EndofClassProject
             QuestLog questLog = new QuestLog();
             questLog.ShowDialog();
             
+        }
+
+        private void submitButton_Click(object sender, EventArgs e)
+        {
+            displayTextBox.AppendText("\n" + com.Handler(commandTextBox.Text));
         }
     }
 }
