@@ -86,6 +86,21 @@ namespace EndofClassProject
                         break;
                 }
             }
+
+            else if (placeholder.Length == 3)
+            {
+                //have to instantciate and make the npc variable
+                //once made you have to place the npc name there
+                string npc = placeholder[1];
+                action = placeholder[2];
+
+                switch (verb)
+                {
+                    case "ask":
+                        post = QuestHandler("ask", npc, action);
+                        break;
+                }
+            }
             else
             {
                 post = "Invalid command. Try again?";
@@ -93,6 +108,51 @@ namespace EndofClassProject
 
 
             return post;
+        }
+
+        public string QuestHandler(string v,string npc, string act)
+        {
+            
+            string verb;//This will be the placeholder to determine the verb.
+            string action;//This will be the placeholder to determine the action.
+            string post = "Try again?";//This will be for holding the output.
+            string actor;// This is where the NPC name will go
+          
+
+            verb = v;
+
+            actor = npc;
+
+            action = act;
+
+            Creature x;
+
+            foreach (Creature z in world.worldList[player.Location].mobList)
+            {
+                if(z.Name == actor)
+                {
+                    x = z;
+                    break;
+                }
+                else if(z.accessName.Contains(actor))
+                {
+                    x = z;
+                    break;
+                }
+            }
+
+            switch(action)
+            {
+                case "flower":
+                    post = "I know about the Flower";
+                    break;
+                case "blade":
+                    post = "I know about the blade";
+                    break;
+
+            }
+                   
+           return post;
         }
 
         public string Go(string direction)
