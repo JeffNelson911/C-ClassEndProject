@@ -10,19 +10,17 @@ using System.Windows.Forms;
 
 namespace EndofClassProject
 {
-    public partial class Form1 : Form
+    public partial class QuestLog : Form
     {
-        public Form1()
+        public QuestLog()
         {
             InitializeComponent();
         }
 
-        private void questLogButton_Click(object sender, EventArgs e)
+        private void returnButton_Click(object sender, EventArgs e)
         {
-            Form1 form = new Form1();
-            QuestLog questLog = new QuestLog();
-            questLog.ShowDialog();
-            
+            //Close the form.
+            this.Close();
         }
     }
 }
