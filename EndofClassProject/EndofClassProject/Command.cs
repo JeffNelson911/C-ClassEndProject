@@ -12,6 +12,14 @@ namespace EndofClassProject
         public World world = new World();
         public Player player = new Player();
 
+
+        public void queue()
+        {
+            
+        }
+
+
+
         public string Handler(string input)
         {
             string[] placeholder;//this is the array the string segments should be going into.
