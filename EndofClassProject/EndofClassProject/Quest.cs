@@ -47,7 +47,7 @@ namespace EndofClassProject
             keywords = keys;
         }
 
-        public bool checkKeyword(string key,string[] keyword)
+        public virtual bool checkKeyword(string key,string[] keyword)
         {
            bool check = false;
            
@@ -66,11 +66,11 @@ namespace EndofClassProject
                 return check;
         }
 
-        public string updateDescription(int i, bool check, string key)
+        public virtual string updateDescription(int state, bool check, string key)
         {
             if (check == true)
             {
-                switch (i)
+                switch (state)
                 {
                     case 0:
                         description = "";
