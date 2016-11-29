@@ -13,7 +13,7 @@ namespace EndofClassProject
         public string description;
         public int qId;
         public string prompt;
-        public int stage;
+        public int state;
 
 
         public Quest()
@@ -24,7 +24,7 @@ namespace EndofClassProject
             description = "Im a quest you noob";
             qId = -1;
             prompt = "Hey you got your default Quest why don't you say Hello?";
-            stage = 0;
+            state = 0;
         }
 
         public Quest(string name, string[] keys,string desc, int q, string p,int s)
@@ -34,7 +34,7 @@ namespace EndofClassProject
             description = desc;
             qId = q;
             prompt = p;
-            stage = s;
+            state = s;
         }
 
         public void setQuestName(string name)
@@ -47,16 +47,16 @@ namespace EndofClassProject
             keywords = keys;
         }
 
-        public virtual bool checkKeyword(string key,string[] keyword)
+        public virtual bool checkKeyword(string key)
         {
            bool check = false;
            
             for(int i=0; i< 5;i++)
             {
-                if (key.Equals(keyword[i]))
+                if (key.Equals(keywords[i]))
                 {
                     check = true;
-                    description = updateDescription(i, check, key);
+                    description = updateDescription(state);
                 }
                 else
                 {
@@ -66,9 +66,9 @@ namespace EndofClassProject
                 return check;
         }
 
-        public virtual string updateDescription(int state, bool check, string key)
+        public virtual string updateDescription(int state)
         {
-            if (check == true)
+            if ( == true)
             {
                 switch (state)
                 {
