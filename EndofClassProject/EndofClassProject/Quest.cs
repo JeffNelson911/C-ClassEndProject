@@ -13,6 +13,7 @@ namespace EndofClassProject
         public string description;
         public int qId;
         public string prompt;
+        public int stage;
 
 
         public Quest()
@@ -22,14 +23,18 @@ namespace EndofClassProject
             keywords[0] = "Hello";
             description = "Im a quest you noob";
             qId = -1;
+            prompt = "Hey you got your default Quest why don't you say Hello?";
+            stage = 0;
         }
 
-        public Quest(string name, string[] keys,string desc, int q)
+        public Quest(string name, string[] keys,string desc, int q, string p,int s)
         {
             questName = name;
             keywords = keys;
             description = desc;
             qId = q;
+            prompt = p;
+            stage = s;
         }
 
         public void setQuestName(string name)
@@ -68,10 +73,11 @@ namespace EndofClassProject
                 switch (i)
                 {
                     case 0:
-                        description = "Ah you are looking for the Flower of Amure that has been rumored to be in the forest";
+                        description = "";
                         break;
                     case 1:
                         description = " words here";
+                        
                         break;
                     case 2:
                         description = "more words here";
@@ -89,5 +95,6 @@ namespace EndofClassProject
             }
             return description;
         }
+
     }
 }
