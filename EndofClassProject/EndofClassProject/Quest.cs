@@ -49,11 +49,10 @@ namespace EndofClassProject
 
         public virtual void checkQuest()
         {
-
+            //This needs to be overridden in it's successors.
         }
 
-
-        public virtual bool checkKeyword(string key)
+        public bool checkKeyword(string key)
         {
            bool check = false;
            
