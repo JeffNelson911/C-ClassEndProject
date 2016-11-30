@@ -921,5 +921,16 @@ namespace EndofClassProject
             }
             return playerMoved;
         }
+
+        public bool checkMob()
+        {
+            bool exists = false;
+            foreach (Creature val in world.worldList[player.Location].mobList)
+            {
+                exists = true;
+            }
+
+            return exists;
+        }
     }
 }
