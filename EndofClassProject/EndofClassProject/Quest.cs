@@ -47,6 +47,12 @@ namespace EndofClassProject
             keywords = keys;
         }
 
+        public virtual void checkQuest()
+        {
+
+        }
+
+
         public virtual bool checkKeyword(string key)
         {
            bool check = false;
@@ -56,44 +62,9 @@ namespace EndofClassProject
                 if (key.Equals(keywords[i]))
                 {
                     check = true;
-                    description = updateDescription(state);
-                }
-                else
-                {
-                    //fill in in a minute
                 }
             }
                 return check;
-        }
-
-        public virtual string updateDescription(int state)
-        {
-            if ( == true)
-            {
-                switch (state)
-                {
-                    case 0:
-                        description = "";
-                        break;
-                    case 1:
-                        description = " words here";
-                        
-                        break;
-                    case 2:
-                        description = "more words here";
-                        break;
-                    case 3:
-                        description = " continue words";
-                        break;
-                    case 4:
-                        description = "words continued";
-                        break;
-                    case 5:
-                        description = "etc etc etc";
-                        break;
-                }
-            }
-            return description;
         }
 
     }
