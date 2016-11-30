@@ -14,6 +14,7 @@ namespace EndofClassProject
         public int qId;
         public string prompt;
         public int state;
+        private bool finished;
 
 
         public Quest()
@@ -25,6 +26,7 @@ namespace EndofClassProject
             qId = -1;
             prompt = "Hey you got your default Quest why don't you say Hello?";
             state = 0;
+            finished = false;
         }
 
         public Quest(string name, string[] keys,string desc, int q, string p,int s)
