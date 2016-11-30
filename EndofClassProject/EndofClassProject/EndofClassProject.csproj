@@ -51,6 +51,7 @@
     <Compile Include="Container.cs" />
     <Compile Include="Creature.cs" />
     <Compile Include="Dice.cs" />
+    <Compile Include="FlowerQuest.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
