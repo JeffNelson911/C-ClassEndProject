@@ -8,7 +8,7 @@ namespace EndofClassProject
 {
     class FlowerQuest : Quest
     {
-
+        
         public FlowerQuest()
         {
             questName = "Retrieve the Crysantheum";
@@ -19,6 +19,23 @@ namespace EndofClassProject
             qId = 1;
             prompt = "We need the Crysantheum flower. It is said to be a miracle cure that can solve anything. Can you find it for me?";
             state = 0;
+        }
+
+        public override void checkQuest()
+        {
+            state = 0;
+            switch(state)
+            {
+                case 0:
+                    if(keywords.contains("flower") = false)
+                    {
+                        state++;
+                    }
+                    break;
+                case 1:
+
+            }
+                
         }
 
     }
