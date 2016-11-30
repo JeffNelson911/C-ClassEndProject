@@ -8,7 +8,9 @@ namespace EndofClassProject
 {
     class FlowerQuest : Quest
     {
-        
+
+        private List<Item> inventory = new List<Item>();
+
         public FlowerQuest()
         {
             questName = "Retrieve the Crysantheum";
@@ -21,18 +23,37 @@ namespace EndofClassProject
             state = 0;
         }
 
+        public void copyInventory(List<Item> i)
+        {
+            inventory = i;
+        }
+
         public override void checkQuest()
         {
             state = 0;
+            Item placeholder = null;
             switch(state)
             {
                 case 0:
-                    if(keywords.contains("flower") = false)
+                    if(keywords.Contains("flower"))
                     {
                         state++;
                     }
                     break;
                 case 1:
+                    foreach(Item val in inventory)
+                    {
+                        if (val.Name.Equals("crysantheum"))
+                        {
+                            placeholder = val;
+                            break;
+                        }
+                    }
+                    if(placeholder != null)
+                    {
+                        state++;
+                    }
+                    break;
 
             }
                 
