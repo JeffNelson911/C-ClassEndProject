@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Armor.cs" />
+    <Compile Include="Combat.cs" />
     <Compile Include="Command.cs" />
     <Compile Include="Container.cs" />
     <Compile Include="Creature.cs" />

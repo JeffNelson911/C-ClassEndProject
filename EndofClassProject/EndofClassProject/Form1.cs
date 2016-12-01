@@ -23,7 +23,7 @@ namespace EndofClassProject
             Form1 form = new Form1();
             QuestLog questLog = new QuestLog();
             questLog.ShowDialog();
-            
+
         }
 
         private void submitButton_Click(object sender, EventArgs e)
