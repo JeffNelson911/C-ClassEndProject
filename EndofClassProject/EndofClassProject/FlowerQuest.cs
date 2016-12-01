@@ -54,6 +54,9 @@ namespace EndofClassProject
                         state++;
                     }
                     break;
+                case 2:
+
+                    break;
 
             }
                 
