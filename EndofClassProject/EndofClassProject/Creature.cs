@@ -19,6 +19,7 @@ namespace EndofClassProject
         public int Lvl { get; set; }
         public int Exp { get; set; }
         public bool isdead { get; set; }
+        public int given { get; set; }
         public List<Item> mobInventory;
         //public Image i { get; set; }
 
@@ -44,6 +45,7 @@ namespace EndofClassProject
             DMG = ATK+Lvl;
             Exp = 10;
             isdead = false;
+            given = 0;
             //i = Image.FromFile("Bestiary.png");
         }
 

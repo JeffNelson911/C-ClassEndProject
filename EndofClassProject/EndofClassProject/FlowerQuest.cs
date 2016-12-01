@@ -55,7 +55,12 @@ namespace EndofClassProject
                     }
                     break;
                 case 2:
+                    if(hasGiven() == true) //if player uses give comand change given to 1 and return on hasGiven check true add Quest giver to the paramater in hasGiven
+                    {
 
+                        //update journal to complete and award EXP
+
+                    }
                     break;
 
             }
