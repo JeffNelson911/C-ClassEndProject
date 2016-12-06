@@ -32,16 +32,16 @@ namespace EndofClassProject
         {
             state = 0;
             Item placeholder = null;
-            switch(state)
+            switch (state)
             {
                 case 0:
-                    if(keywords.Contains("blade"))
+                    if (keywords.Contains("blade"))
                     {
                         state++;
                     }
                     break;
                 case 1:
-                    foreach(Item val in inventory)
+                    foreach (Item val in inventory)
                     {
                         if (val.Name.Equals("vorpal blade"))
                         {
@@ -49,13 +49,13 @@ namespace EndofClassProject
                             break;
                         }
                     }
-                    if(placeholder != null)
+                    if (placeholder != null)
                     {
                         state++;
                     }
                     break;
                 case 2:
-                    if(hasGiven() == true) //if player uses give comand change given to 1 and return on hasGiven check true add Quest giver to the paramater in hasGiven
+                    if (hasGiven() == true) //if player uses give comand change given to 1 and return on hasGiven check true add Quest giver to the paramater in hasGiven
                     {
 
                         //update journal to complete and award EXP
@@ -64,8 +64,27 @@ namespace EndofClassProject
                     break;
 
             }
-                
         }
-
+        public bool hasGiven()
+        {
+            bool given = false;
+            Item placeholder = null;
+            foreach (Item val in Creature.inventory)
+            {
+                if (val.Name.Equals("vorpal blade"))
+                {
+                    placeholder = val;
+                    break;
+                }
+            }
+            if (placeholder != null)
+            {
+                given = true;
+            }
+            return given;
+        }
     }
 }
+
+
+
