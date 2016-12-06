@@ -52,8 +52,8 @@ namespace EndofClassProject
             playerExpLabel.Text = com.player.EXP.ToString();
 
             //this will update the equipment labels every tick.
-            weaponLabel.Text = com.player.Weapon.Name;
-            armorLabel.Text = com.player.Armor.Name;
+            playerWeaponLabel.Text = com.player.Weapon.Name.ToString();
+            playerArmorLabel.Text = com.player.Armor.Name.ToString();
         }
     }
 }

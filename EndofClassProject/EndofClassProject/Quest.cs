@@ -15,7 +15,6 @@ namespace EndofClassProject
         public string prompt;
         public int state;
         private bool finished;
-        public List<string> questList;
 
 
         public Quest()

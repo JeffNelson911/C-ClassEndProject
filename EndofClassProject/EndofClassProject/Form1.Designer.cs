@@ -344,6 +344,7 @@
             // 
             // guiTimer
             // 
+            this.guiTimer.Enabled = true;
             this.guiTimer.Interval = 300;
             this.guiTimer.Tick += new System.EventHandler(this.guiTimer_Tick);
             // 

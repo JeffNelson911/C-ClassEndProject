@@ -10,6 +10,7 @@ namespace EndofClassProject
     {
 
         public List<Room> worldList = new List<Room>();
+        public List<Quest> questList = new List<Quest>();
 
         public World()
         {
@@ -100,6 +101,10 @@ namespace EndofClassProject
             Weapon staff = new Weapon();
             Treasure gold = new Treasure();
             string[] placeHolder;
+
+            //These are all the quests in the world.
+            FlowerQuest flower = new FlowerQuest();
+            BladeQuest blade = new BladeQuest();
 
 
             //Room 0 stuff. This is the bug room, where people should be sent if something wrong happens. The player should never normally see this.
