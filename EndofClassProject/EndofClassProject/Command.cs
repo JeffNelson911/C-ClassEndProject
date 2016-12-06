@@ -207,7 +207,7 @@ namespace EndofClassProject
             {
                 foreach(string val in world.worldList[player.Location].exitList)
                 {
-                    look += val;
+                    look += val + " ";
                 }
             }
             else
