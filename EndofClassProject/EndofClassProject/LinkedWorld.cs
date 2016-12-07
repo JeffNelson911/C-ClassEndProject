@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -7,39 +8,43 @@ using System.Threading.Tasks;
 
 namespace EndofClassProject
 {
-    public class TreeNode<TValue>
+    class LinkedWorld
     {
-        #region Properties
-        public TValue Value { get; set; }
-        public List<TreeNode<TValue>> Children { get; private set; }
-        public bool HasChild { get { return Children.Any(); } }
-        #endregion
-        #region Constructor
-        public TreeNode()
+        public List<Room> worldList = new List<Room>();
+        public List<Quest> questList = new List<Quest>();
+        public LinkedWorld()
         {
-            this.Children = new List<TreeNode<TValue>>();
+            makeWorld();
         }
-        public TreeNode(TValue value)
-            : this()
-        {
-            this.Value = value;
-        }
-        #endregion
-        #region Methods
-        public void AddChild(TreeNode<TValue> treeNode)
-        {
-            Children.Add(treeNode);
-        }
-        public void AddChild(TValue value)
-        {
-            var treeNode = new TreeNode<TValue>(value);
-            AddChild(treeNode);
-        }
-        #endregion
-    }
 
-    public class LinkedWorld : TreeNode<Room>
-    {
+        public void makeWorld()
+        {
+            
+            Room room1 = new Room();
+            Room room2 = new Room();
+            Room room3 = new Room();
+            Room room4 = new Room();
+            Room room5 = new Room();
+            Room room6 = new Room();
+            Room room7 = new Room();
+            Room room8 = new Room();
+            Room room9 = new Room();
+            Room room10 = new Room();
+            Room room11 = new Room();
+            Room room12 = new Room();
+            Room room13 = new Room();
+            Room room14 = new Room();
+            Room room15 = new Room();
+            Room room16 = new Room();
+            Room room17 = new Room();
+            Room room18 = new Room();
+            Room room19 = new Room();
+            Room room20 = new Room();
+
+
+
+            
+        }
 
     }
 

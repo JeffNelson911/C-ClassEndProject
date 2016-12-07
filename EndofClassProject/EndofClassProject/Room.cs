@@ -19,6 +19,7 @@ namespace EndofClassProject
 
         public List<string> exitList;
 
+        //generic room. Nothing special.
         public Room()
         {
             mobList = new List<Creature>();
@@ -27,6 +28,28 @@ namespace EndofClassProject
             RID = -1;
             rName = "Bob";
             rDesc = "Instantiate me properly!";
+        }
+
+        //For quickly making a room.
+        public Room(int RoomID, string RoomName, string Description)
+        {
+            mobList = new List<Creature>();
+            itemList = new List<Item>();
+            exitList = new List<string>();
+            RID = RoomID;
+            rName = RoomName;
+            rDesc = Description;
+        }
+
+        //for completely making a room.
+        public Room(List<Creature> creature, List<Item> items, List<string> exits, int RoomID, string RoomName, string Description)
+        {
+            mobList = creature;
+            itemList = items;
+            exitList = exits;
+            RID = RoomID;
+            rName = RoomName;
+            rDesc = Description;
         }
 
         public void checkDeaths()
