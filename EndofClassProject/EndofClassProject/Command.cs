@@ -9,7 +9,8 @@ namespace EndofClassProject
 {
     class Command
     {
-        public World world = new World();
+        //public World world = new World();
+        public LinkedWorld world = new LinkedWorld();
 
         public string Handler(string input)
         {
@@ -96,7 +97,7 @@ namespace EndofClassProject
                 switch (verb)
                 {
                     case "ask":
-                        post = QuestHandler("ask", npc, action);
+                        //post = QuestHandler("ask", npc, action);
                         break;
                 }
             }
@@ -109,61 +110,135 @@ namespace EndofClassProject
             return post;
         }
 
-        public string QuestHandler(string v,string npc, string act)
-        {
-            
-            string verb;//This will be the placeholder to determine the verb.
-            string action;//This will be the placeholder to determine the action.
-            string post = "Try again?";//This will be for holding the output.
-            string actor;// This is where the NPC name will go
-          
+        //public string QuestHandler(string v,string npc, string act)
+        //{
 
-            verb = v;
+        //    string verb;//This will be the placeholder to determine the verb.
+        //    string action;//This will be the placeholder to determine the action.
+        //    string post = "Try again?";//This will be for holding the output.
+        //    string actor;// This is where the NPC name will go
 
-            actor = npc;
 
-            action = act;
+        //    verb = v;
 
-            Creature x;
+        //    actor = npc;
 
-            foreach (Creature z in world.worldList[Player.Location].mobList)
-            {
-                if(z.Name == actor)
-                {
-                    x = z;
-                    break;
-                }
-                else if(z.accessName.Contains(actor))
-                {
-                    x = z;
-                    break;
-                }
-            }
+        //    action = act;
 
-            switch(action)
-            {
-                case "flower":
-                    post = "I know about the Flower";
-                    break;
-                case "blade":
-                    post = "I know about the blade";
-                    break;
+        //    Creature x;
 
-            }
-                   
-           return post;
-        }
+        //    foreach (Creature z in world.worldList[Player.Location].mobList)
+        //    {
+        //        if(z.Name == actor)
+        //        {
+        //            x = z;
+        //            break;
+        //        }
+        //        else if(z.accessName.Contains(actor))
+        //        {
+        //            x = z;
+        //            break;
+        //        }
+        //    }
+
+        //    switch(action)
+        //    {
+        //        case "flower":
+        //            post = "I know about the Flower";
+        //            break;
+        //        case "blade":
+        //            post = "I know about the blade";
+        //            break;
+
+        //    }
+
+        //   return post;
+        //}
+
+        //public string Go(string direction)
+        //{
+        //    string go = "";
+        //    bool playerMoved;
+
+        //    playerMoved = roomList(direction, world.worldList[Player.Location].RID);
+
+        //    if (playerMoved == true)
+        //    {
+        //        go = "You move to the " + direction + ".";
+        //        Look();
+        //    }
+        //    else
+        //    {
+        //        go = "You can't move to the " + direction + ".";
+        //    }
+
+
+        //    return go;
+        //}
 
         public string Go(string direction)
         {
             string go = "";
-            bool playerMoved;
+            bool playerMoved = false;
+            Room dir = null;
 
-            playerMoved = roomList(direction, world.worldList[Player.Location].RID);
+            //Check the directions of the world. If the direction exists, copy the room to that direction.
+            if (world.worldList[Player.Location].checkDirection(direction))
+            {
+                playerMoved = true;
 
+                if (dir.Equals("n") || dir.Equals("north"))
+                {
+                    dir = world.worldList[Player.Location].north;
+                }
+                else if (dir.Equals("s") || dir.Equals("south"))
+                {
+                    dir = world.worldList[Player.Location].south;
+                }
+                else if (dir.Equals("e") || dir.Equals("east"))
+                {
+                    dir = world.worldList[Player.Location].east;
+                }
+                else if (dir.Equals("w") || dir.Equals("west"))
+                {
+                    dir = world.worldList[Player.Location].west;
+                }
+                else if (dir.Equals("ne") || dir.Equals("northeast"))
+                {
+                    dir = world.worldList[Player.Location].northeast;
+                }
+                else if (dir.Equals("nw") || dir.Equals("northwest"))
+                {
+                    dir = world.worldList[Player.Location].northwest;
+                }
+                else if (dir.Equals("se") || dir.Equals("southeast"))
+                {
+                    dir = world.worldList[Player.Location].southeast;
+                }
+                else if (dir.Equals("sw") || dir.Equals("southwest"))
+                {
+                    dir = world.worldList[Player.Location].southwest;
+                }
+                else if (dir.Equals("u") || dir.Equals("up"))
+                {
+                    dir = world.worldList[Player.Location].up;
+                }
+                else if (dir.Equals("d") || dir.Equals("down"))
+                {
+                    dir = world.worldList[Player.Location].down;
+                }
+                else
+                {
+                    //just in case.
+                    playerMoved = false;
+                }
+            }
+
+            //if the player moved..
             if (playerMoved == true)
             {
                 go = "You move to the " + direction + ".";
+                Player.Location = dir.RID;
                 Look();
             }
             else

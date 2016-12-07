@@ -17,11 +17,11 @@ namespace EndofClassProject
         {
             InitializeComponent();
             Player.setBaseStats();
-            displayTextBox.AppendText(com.Handler("look"));
-            playerItemListBox.DataSource = Player.Inventory;
-            playerItemListBox.DisplayMember = Player.Inventory.ToString();
-            roomItemListBox.DataSource = com.world.worldList[Player.Location].itemList;
-            roomItemListBox.DisplayMember = com.world.worldList[Player.Location].itemList.ToString();
+            //displayTextBox.AppendText(com.Handler("look"));
+            //playerItemListBox.DataSource = Player.Inventory;
+            //playerItemListBox.DisplayMember = Player.Inventory.ToString();
+            //roomItemListBox.DataSource = com.world.worldList[Player.Location].itemList;
+            //roomItemListBox.DisplayMember = com.world.worldList[Player.Location].itemList.ToString();
         }
 
         private void questLogButton_Click(object sender, EventArgs e)

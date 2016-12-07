@@ -21,23 +21,23 @@ namespace EndofClassProject
             Effect = "None";
             durability = 1;
         }
-        public string UseEffect(Player player)
+        public string UseEffect()
         {
             string i = "";
             switch (Effect)
             {
                 case "Heal1":
-                    Heal(player);
+                    Heal();
                     i = "\nYou recover 5 HP";
                     break;
 
                 case "Def1":
-                    Def(player);
+                    Def();
                     i = "\nYour defense goes up by 2";
                     break;
 
                 case "Atk1":
-                    Atk(player);
+                    Atk();
                     i = "\nYour attack goes up by 2";
                     break;
 
@@ -47,18 +47,17 @@ namespace EndofClassProject
             }
             return i;
         }
-        public void Heal(Player playerHeal)
+        public void Heal()
         {
-            playerHeal.HP = playerHeal.HP + 5;
-
+            Player.HP = Player.HP + 5;
         }
-        public void Def(Player playerDef)
+        public void Def()
         {
-            playerDef.AC = playerDef.AC + 2;
+            Player.AC = Player.AC + 2;
         }
-        public void Atk(Player playerAtk)
+        public void Atk()
         {
-            playerAtk.ATK = playerAtk.ATK + 2;
+            Player.ATK = Player.ATK + 2;
         }
     }
 }

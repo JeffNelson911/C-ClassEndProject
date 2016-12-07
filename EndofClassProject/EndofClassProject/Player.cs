@@ -31,6 +31,8 @@ namespace EndofClassProject
             Lvl = 1;
             EXP = 0;
             Location = 1;
+            Armor = new Armor();
+            Weapon = new Weapon();
         }
 
 
