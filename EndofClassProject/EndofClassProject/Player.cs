@@ -6,40 +6,35 @@ using System.Threading.Tasks;
 
 namespace EndofClassProject
 {
-    public class Player
+    public static class Player
     {
-        public int HP { get; set; }
-        public int AC { get; set; }
-        public int ATK { get; set; }
-        public int DMG { get; set; }
-        public int Lvl { get; set; }
-        public int EXP { get; set; }
-        public Weapon Weapon { get; set; }
-        public Armor Armor { get; set; }
-        public List<Item> Inventory;
-        public int Location { get; set; }
+        public static int HP { get; set; }
+        public static int AC { get; set; }
+        public static int ATK { get; set; }
+        public static int DMG { get; set; }
+        public static int Lvl { get; set; }
+        public static int EXP { get; set; }
+        public static Weapon Weapon { get; set; }
+        public static Armor Armor { get; set; }
+        public static List<Item> Inventory;
+        public static int Location { get; set; }
 
-        List<Item> playerItems = new List<Item>();
+        static List<Item> playerItems = new List<Item>();
 
-        public Player()
+
+        public static void setBaseStats()
         {
             HP = 20;
+            AC = 0;
             ATK = 1;
+            DMG = 1;
             Lvl = 1;
             EXP = 0;
-            Location = 0;
-            Weapon = new Weapon();
-            Armor = new Armor();
-            Inventory = new List<Item>();
-            Weapon.Name = "Wooden Stick";
-            Weapon.attackValue = 1;
-            Armor.Name = "Tattered Shirt";
-            DMG = ATK + Weapon.attackValue;
-            AC = Armor.armorValue;
             Location = 1;
         }
 
-        public int weaponAttack()
+
+        public static int weaponAttack()
         {
             int result = 0;
 
@@ -51,7 +46,7 @@ namespace EndofClassProject
 
         }
 
-        public void levelUp()
+        public static void levelUp()
         {
             if(EXP >= 100)
             {
@@ -60,7 +55,7 @@ namespace EndofClassProject
             }
         }
 
-        public bool checkIfDead()
+        public static bool checkIfDead()
         {
             bool isdead = false;
             if(HP <= 0)

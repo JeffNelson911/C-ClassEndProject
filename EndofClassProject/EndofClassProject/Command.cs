@@ -10,7 +10,6 @@ namespace EndofClassProject
     class Command
     {
         public World world = new World();
-        public Player player = new Player();
 
 
         public void queue()
@@ -135,7 +134,7 @@ namespace EndofClassProject
 
             Creature x;
 
-            foreach (Creature z in world.worldList[player.Location].mobList)
+            foreach (Creature z in world.worldList[Player.Location].mobList)
             {
                 if(z.Name == actor)
                 {
@@ -168,7 +167,7 @@ namespace EndofClassProject
             string go = "";
             bool playerMoved;
 
-            playerMoved = roomList(direction, world.worldList[player.Location].RID);
+            playerMoved = roomList(direction, world.worldList[Player.Location].RID);
 
             if (playerMoved == true)
             {
@@ -187,25 +186,25 @@ namespace EndofClassProject
         {
             string look = "";
 
-            look = "\n" + world.worldList[player.Location].rName +
-                "\n" + world.worldList[player.Location].rDesc + 
+            look = "\n" + world.worldList[Player.Location].rName +
+                "\n" + world.worldList[Player.Location].rDesc + 
                 "\n";
 
-            foreach(Creature val in world.worldList[player.Location].mobList)
+            foreach(Creature val in world.worldList[Player.Location].mobList)
             {
                 look += "\nThere is a " + val.Name + " here.";
             }
 
-            foreach(Item val in world.worldList[player.Location].itemList)
+            foreach(Item val in world.worldList[Player.Location].itemList)
             {
                 look += "\nThere is a " + val.Name + " here.";
             }
 
             look += "\nThere are ";
 
-            if(world.worldList[player.Location].exitList.Count != 0)
+            if(world.worldList[Player.Location].exitList.Count != 0)
             {
-                foreach(string val in world.worldList[player.Location].exitList)
+                foreach(string val in world.worldList[Player.Location].exitList)
                 {
                     look += val + " ";
                 }
@@ -233,7 +232,7 @@ namespace EndofClassProject
             Item placeHolder = null;
 
             //for each item in the list, check to see if the selected name matches the item's.
-            foreach (Item val in world.worldList[player.Location].itemList)
+            foreach (Item val in world.worldList[Player.Location].itemList)
             {
                 if (val.accessName.Contains(Name))
                 {
@@ -248,8 +247,8 @@ namespace EndofClassProject
             }
             if (placeHolder != null)//If the placeholder has an item, do this.
             {
-                player.Inventory.Add(placeHolder);
-                world.worldList[player.Location].itemList.Remove(placeHolder);
+                Player.Inventory.Add(placeHolder);
+                world.worldList[Player.Location].itemList.Remove(placeHolder);
                 get = "\nYou pick up the " + placeHolder.Name;
             }
             else
@@ -267,7 +266,7 @@ namespace EndofClassProject
             Item placeHolder = null;
 
             //for each item in the list, check to see if the selected name matches the item's.
-            foreach (Item val in player.Inventory)
+            foreach (Item val in Player.Inventory)
             {
                 if (val.accessName.Contains(Name))
                 {
@@ -282,8 +281,8 @@ namespace EndofClassProject
             }
             if (placeHolder != null)//If the placeholder has an item, do this.
             {
-                world.worldList[player.Location].itemList.Add(placeHolder);
-                player.Inventory.Remove(placeHolder);
+                world.worldList[Player.Location].itemList.Add(placeHolder);
+                Player.Inventory.Remove(placeHolder);
                 drop = "\nYou pick up the " + placeHolder.Name;
             }
             else
@@ -307,9 +306,9 @@ namespace EndofClassProject
         {
             string inventory = "";
 
-            if(player.Inventory.Count != 0)
+            if(Player.Inventory.Count != 0)
             {
-                foreach (Item val in player.Inventory)
+                foreach (Item val in Player.Inventory)
                 {
                     inventory += "\n " + val.Name;
                 }
@@ -326,7 +325,7 @@ namespace EndofClassProject
         {
             string score = "";
 
-            score += player.EXP;
+            score += Player.EXP;
 
             return score;
         }
@@ -347,83 +346,83 @@ namespace EndofClassProject
                 switch (roomID)
                 {
                     case 0:
-                        player.Location = 2;
+                        Player.Location = 2;
                         playerMoved = true;
                         break;
                     case 2:
-                        player.Location = 7;
+                        Player.Location = 7;
                         playerMoved = true;
                         break;
                     case 8:
-                        player.Location = 3;
+                        Player.Location = 3;
                         playerMoved = true;
                         break;
                     case 9:
-                        player.Location = 10;
+                        Player.Location = 10;
                         playerMoved = true;
                         break;
                     case 10:
-                        player.Location = 11;
+                        Player.Location = 11;
                         playerMoved = true;
                         break;
                     case 15:
-                        player.Location = 17;
+                        Player.Location = 17;
                         playerMoved = true;
                         break;
                     case 17:
-                        player.Location = 20;
+                        Player.Location = 20;
                         playerMoved = true;
                         break;
                     case 19:
-                        player.Location = 18;
+                        Player.Location = 18;
                         playerMoved = true;
                         break;
                     case 24:
-                        player.Location = 25;
+                        Player.Location = 25;
                         playerMoved = true;
                         break;
                     case 29:
-                        player.Location = 26;
+                        Player.Location = 26;
                         playerMoved = true;
                         break;
                     case 32:
-                        player.Location = 33;
+                        Player.Location = 33;
                         playerMoved = true;
                         break;
                     case 36:
-                        player.Location = 37;
+                        Player.Location = 37;
                         playerMoved = true;
                         break;
                     case 38:
-                        player.Location = 39;
+                        Player.Location = 39;
                         playerMoved = true;
                         break;
                     case 41:
-                        player.Location = 32;
+                        Player.Location = 32;
                         playerMoved = true;
                         break;
                     case 42:
-                        player.Location = 41;
+                        Player.Location = 41;
                         playerMoved = true;
                         break;
                     case 45:
-                        player.Location = 43;
+                        Player.Location = 43;
                         playerMoved = true;
                         break;
                     case 46:
-                        player.Location = 44;
+                        Player.Location = 44;
                         playerMoved = true;
                         break;
                     case 47:
-                        player.Location = 46;
+                        Player.Location = 46;
                         playerMoved = true;
                         break;
                     case 52:
-                        player.Location = 50;
+                        Player.Location = 50;
                         playerMoved = true;
                         break;
                     case 55:
-                        player.Location = 54;
+                        Player.Location = 54;
                         playerMoved = true;
                         break;
                 }
@@ -433,115 +432,115 @@ namespace EndofClassProject
                 switch (roomID)
                 {
                     case 0:
-                        player.Location = 3;
+                        Player.Location = 3;
                         playerMoved = true;
                         break;
                     case 1:
-                        player.Location = 0;
+                        Player.Location = 0;
                         playerMoved = true;
                         break;
                     case 2:
-                        player.Location = 4;
+                        Player.Location = 4;
                         playerMoved = true;
                         break;
                     case 4:
-                        player.Location = 5;
+                        Player.Location = 5;
                         playerMoved = true;
                         break;
                     case 6:
-                        player.Location = 1;
+                        Player.Location = 1;
                         playerMoved = true;
                         break;
                     case 7:
-                        player.Location = 9;
+                        Player.Location = 9;
                         playerMoved = true;
                         break;
                     case 10:
-                        player.Location = 31;
+                        Player.Location = 31;
                         playerMoved = true;
                         break;
                     case 11:
-                        player.Location = 12;
+                        Player.Location = 12;
                         playerMoved = true;
                         break;
                     case 12:
-                        player.Location = 13;
+                        Player.Location = 13;
                         playerMoved = true;
                         break;
                     case 13:
-                        player.Location = 15;
+                        Player.Location = 15;
                         playerMoved = true;
                         break;
                     case 14:
-                        player.Location = 17;
+                        Player.Location = 17;
                         playerMoved = true;
                         break;
                     case 17:
-                        player.Location = 16;
+                        Player.Location = 16;
                         playerMoved = true;
                         break;
                     case 16:
-                        player.Location = 18;
+                        Player.Location = 18;
                         playerMoved = true;
                         break;
                     case 19:
-                        player.Location = 20;
+                        Player.Location = 20;
                         playerMoved = true;
                         break;
                     case 23:
-                        player.Location = 10;
+                        Player.Location = 10;
                         playerMoved = true;
                         break;
                     case 24:
-                        player.Location = 23;
+                        Player.Location = 23;
                         playerMoved = true;
                         break;
                     case 25:
-                        player.Location = 26;
+                        Player.Location = 26;
                         playerMoved = true;
                         break;
                     case 27:
-                        player.Location = 24;
+                        Player.Location = 24;
                         playerMoved = true;
                         break;
                     case 28:
-                        player.Location = 30;
+                        Player.Location = 30;
                         playerMoved = true;
                         break;
                     case 31:
-                        player.Location = 32;
+                        Player.Location = 32;
                         playerMoved = true;
                         break;
                     case 37:
-                        player.Location = 38;
+                        Player.Location = 38;
                         playerMoved = true;
                         break;
                     case 40:
-                        player.Location = 39;
+                        Player.Location = 39;
                         playerMoved = true;
                         break;
                     case 42:
-                        player.Location = 43;
+                        Player.Location = 43;
                         playerMoved = true;
                         break;
                     case 43:
-                        player.Location = 44;
+                        Player.Location = 44;
                         playerMoved = true;
                         break;
                     case 48:
-                        player.Location = 49;
+                        Player.Location = 49;
                         playerMoved = true;
                         break;
                     case 51:
-                        player.Location = 50;
+                        Player.Location = 50;
                         playerMoved = true;
                         break;
                     case 53:
-                        player.Location = 48;
+                        Player.Location = 48;
                         playerMoved = true;
                         break;
                     case 54:
-                        player.Location = 53;
+                        Player.Location = 53;
                         playerMoved = true;
                         break;
 
@@ -552,127 +551,127 @@ namespace EndofClassProject
                 switch (roomID)
                 {
                     case 0:
-                        player.Location = 1;
+                        Player.Location = 1;
                         playerMoved = true;
                         break;
                     case 1:
-                        player.Location = 6;
+                        Player.Location = 6;
                         playerMoved = true;
                         break;
                     case 3:
-                        player.Location = 0;
+                        Player.Location = 0;
                         playerMoved = true;
                         break;
                     case 4:
-                        player.Location = 2;
+                        Player.Location = 2;
                         playerMoved = true;
                         break;
                     case 5:
-                        player.Location = 4;
+                        Player.Location = 4;
                         playerMoved = true;
                         break;
                     case 9:
-                        player.Location = 7;
+                        Player.Location = 7;
                         playerMoved = true;
                         break;
                     case 10:
-                        player.Location = 23;
+                        Player.Location = 23;
                         playerMoved = true;
                         break;
                     case 12:
-                        player.Location = 11;
+                        Player.Location = 11;
                         playerMoved = true;
                         break;
                     case 13:
-                        player.Location = 12;
+                        Player.Location = 12;
                         playerMoved = true;
                         break;
                     case 15:
-                        player.Location = 13;
+                        Player.Location = 13;
                         playerMoved = true;
                         break;
                     case 16:
-                        player.Location = 17;
+                        Player.Location = 17;
                         playerMoved = true;
                         break;
                     case 17:
-                        player.Location = 14;
+                        Player.Location = 14;
                         playerMoved = true;
                         break;
                     case 18:
-                        player.Location = 16;
+                        Player.Location = 16;
                         playerMoved = true;
                         break;
                     case 20:
-                        player.Location = 11;
+                        Player.Location = 11;
                         playerMoved = true;
                         break;
                     case 23:
-                        player.Location = 24;
+                        Player.Location = 24;
                         playerMoved = true;
                         break;
                     case 24:
-                        player.Location = 27;
+                        Player.Location = 27;
                         playerMoved = true;
                         break;
                     case 25:
-                        player.Location = 27;
+                        Player.Location = 27;
                         playerMoved = true;
                         break;
                     case 26:
-                        player.Location = 25;
+                        Player.Location = 25;
                         playerMoved = true;
                         break;
                     case 27:
-                        player.Location = 55;
+                        Player.Location = 55;
                         playerMoved = true;
                         break;
                     case 30:
-                        player.Location = 28;
+                        Player.Location = 28;
                         playerMoved = true;
                         break;
                     case 31:
-                        player.Location = 10;
+                        Player.Location = 10;
                         playerMoved = true;
                         break;
                     case 32:
-                        player.Location = 31;
+                        Player.Location = 31;
                         playerMoved = true;
                         break;
                     case 38:
-                        player.Location = 37;
+                        Player.Location = 37;
                         playerMoved = true;
                         break;
                     case 39:
-                        player.Location = 40;
+                        Player.Location = 40;
                         playerMoved = true;
                         break;
                     case 40:
-                        player.Location = 36;
+                        Player.Location = 36;
                         playerMoved = true;
                         break;
                     case 41:
-                        player.Location = 54;
+                        Player.Location = 54;
                         playerMoved = true;
                         break;
                     case 43:
-                        player.Location = 42;
+                        Player.Location = 42;
                         playerMoved = true;
                         break;
                     case 44:
-                        player.Location = 43;
+                        Player.Location = 43;
                         playerMoved = true;
                         break;
                     case 48:
-                        player.Location = 53;
+                        Player.Location = 53;
                         playerMoved = true;
                         break;
                     case 49:
-                        player.Location = 48;
+                        Player.Location = 48;
                         playerMoved = true;
                         break;
                     case 50:
-                        player.Location = 51;
+                        Player.Location = 51;
                         playerMoved = true;
                         break;
                 }
@@ -682,83 +681,83 @@ namespace EndofClassProject
                 switch (roomID)
                 {
                     case 2:
-                        player.Location = 0;
+                        Player.Location = 0;
                         playerMoved = true;
                         break;
                     case 3:
-                        player.Location = 8;
+                        Player.Location = 8;
                         playerMoved = true;
                         break;
                     case 7:
-                        player.Location = 2;
+                        Player.Location = 2;
                         playerMoved = true;
                         break;
                     case 10:
-                        player.Location = 9;
+                        Player.Location = 9;
                         playerMoved = true;
                         break;
                     case 11:
-                        player.Location = 10;
+                        Player.Location = 10;
                         playerMoved = true;
                         break;
                     case 18:
-                        player.Location = 19;
+                        Player.Location = 19;
                         playerMoved = true;
                         break;
                     case 20:
-                        player.Location = 17;
+                        Player.Location = 17;
                         playerMoved = true;
                         break;
                     case 25:
-                        player.Location = 24;
+                        Player.Location = 24;
                         playerMoved = true;
                         break;
                     case 26:
-                        player.Location = 29;
+                        Player.Location = 29;
                         playerMoved = true;
                         break;
                     case 32:
-                        player.Location = 41;
+                        Player.Location = 41;
                         playerMoved = true;
                         break;
                     case 33:
-                        player.Location = 32;
+                        Player.Location = 32;
                         playerMoved = true;
                         break;
                     case 37:
-                        player.Location = 36;
+                        Player.Location = 36;
                         playerMoved = true;
                         break;
                     case 39:
-                        player.Location = 38;
+                        Player.Location = 38;
                         playerMoved = true;
                         break;
                     case 41:
-                        player.Location = 42;
+                        Player.Location = 42;
                         playerMoved = true;
                         break;
                     case 43:
-                        player.Location = 45;
+                        Player.Location = 45;
                         playerMoved = true;
                         break;
                     case 44:
-                        player.Location = 46;
+                        Player.Location = 46;
                         playerMoved = true;
                         break;
                     case 46:
-                        player.Location = 47;
+                        Player.Location = 47;
                         playerMoved = true;
                         break;
                     case 50:
-                        player.Location = 52;
+                        Player.Location = 52;
                         playerMoved = true;
                         break;
                     case 54:
-                        player.Location = 55;
+                        Player.Location = 55;
                         playerMoved = true;
                         break;
                     case 55:
-                        player.Location = 27;
+                        Player.Location = 27;
                         playerMoved = true;
                         break;
                 }
@@ -768,27 +767,27 @@ namespace EndofClassProject
                 switch (roomID)
                 {
                     case 17:
-                        player.Location = 17;
+                        Player.Location = 17;
                         playerMoved = true;
                         break;
                     case 25:
-                        player.Location = 28;
+                        Player.Location = 28;
                         playerMoved = true;
                         break;
                     case 33:
-                        player.Location = 35;
+                        Player.Location = 35;
                         playerMoved = true;
                         break;
                     case 38:
-                        player.Location = 40;
+                        Player.Location = 40;
                         playerMoved = true;
                         break;
                     case 49:
-                        player.Location = 47;
+                        Player.Location = 47;
                         playerMoved = true;
                         break;
                     case 50:
-                        player.Location = 48;
+                        Player.Location = 48;
                         playerMoved = true;
                         break;
                 }
@@ -799,43 +798,43 @@ namespace EndofClassProject
                 switch (roomID)
                 {
                     case 1:
-                        player.Location = 2;
+                        Player.Location = 2;
                         playerMoved = true;
                         break;
                     case 2:
-                        player.Location = 9;
+                        Player.Location = 9;
                         playerMoved = true;
                         break;
                     case 12:
-                        player.Location = 14;
+                        Player.Location = 14;
                         playerMoved = true;
                         break;
                     case 13:
-                        player.Location = 27;
+                        Player.Location = 27;
                         playerMoved = true;
                         break;
                     case 21:
-                        player.Location = 19;
+                        Player.Location = 19;
                         playerMoved = true;
                         break;
                     case 35:
-                        player.Location = 36;
+                        Player.Location = 36;
                         playerMoved = true;
                         break;
                     case 33:
-                        player.Location = 34;
+                        Player.Location = 34;
                         playerMoved = true;
                         break;
                     case 37:
-                        player.Location = 39;
+                        Player.Location = 39;
                         playerMoved = true;
                         break;
                     case 48:
-                        player.Location = 47;
+                        Player.Location = 47;
                         playerMoved = true;
                         break;
                     case 50:
-                        player.Location = 49;
+                        Player.Location = 49;
                         playerMoved = true;
                         break;
                 }
@@ -846,43 +845,43 @@ namespace EndofClassProject
                 switch (roomID)
                 {
                     case 2:
-                        player.Location = 1;
+                        Player.Location = 1;
                         playerMoved = true;
                         break;
                     case 9:
-                        player.Location = 2;
+                        Player.Location = 2;
                         playerMoved = true;
                         break;
                     case 14:
-                        player.Location = 12;
+                        Player.Location = 12;
                         playerMoved = true;
                         break;
                     case 19:
-                        player.Location = 21;
+                        Player.Location = 21;
                         playerMoved = true;
                         break;
                     case 30:
-                        player.Location = 25;
+                        Player.Location = 25;
                         playerMoved = true;
                         break;
                     case 36:
-                        player.Location = 35;
+                        Player.Location = 35;
                         playerMoved = true;
                         break;
                     case 39:
-                        player.Location = 37;
+                        Player.Location = 37;
                         playerMoved = true;
                         break;
                     case 34:
-                        player.Location = 33;
+                        Player.Location = 33;
                         playerMoved = true;
                         break;
                     case 47:
-                        player.Location = 48;
+                        Player.Location = 48;
                         playerMoved = true;
                         break;
                     case 49:
-                        player.Location = 50;
+                        Player.Location = 50;
                         playerMoved = true;
                         break;
 
@@ -894,27 +893,27 @@ namespace EndofClassProject
                 switch (roomID)
                 {
                     case 26:
-                        player.Location = 25;
+                        Player.Location = 25;
                         playerMoved = true;
                         break;
                     case 35:
-                        player.Location = 33;
+                        Player.Location = 33;
                         playerMoved = true;
                         break;
                     case 36:
-                        player.Location = 34;
+                        Player.Location = 34;
                         playerMoved = true;
                         break;
                     case 40:
-                        player.Location = 38;
+                        Player.Location = 38;
                         playerMoved = true;
                         break;
                     case 47:
-                        player.Location = 49;
+                        Player.Location = 49;
                         playerMoved = true;
                         break;
                     case 48:
-                        player.Location = 50;
+                        Player.Location = 50;
                         playerMoved = true;
                         break;
                 }
@@ -925,7 +924,7 @@ namespace EndofClassProject
         public bool checkMob()
         {
             bool exists = false;
-            foreach (Creature val in world.worldList[player.Location].mobList)
+            foreach (Creature val in world.worldList[Player.Location].mobList)
             {
                 exists = true;
             }

@@ -64,11 +64,11 @@ namespace EndofClassProject
                     break;
             }
     }
-        public bool hasGiven(Creature John)
+        public bool hasGiven()
         {
             bool given = false;
             Item placeholder = null;
-            foreach (Item val in John.mobInventory)
+            foreach (Item val in Player.Inventory)
             {
                 if (val.Name.Equals("crysantheum"))
                 {
