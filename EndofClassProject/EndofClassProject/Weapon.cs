@@ -14,5 +14,11 @@ namespace EndofClassProject
         {
             attackValue = 0;
         }
+
+        public Weapon(string name, int aValue)
+        {
+            Name = name;
+            attackValue = aValue;
+        }
     }
 }

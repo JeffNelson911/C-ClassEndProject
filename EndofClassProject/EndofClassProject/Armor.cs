@@ -14,6 +14,11 @@ namespace EndofClassProject
         {
             armorValue = 0;
         }
+        public Armor(string name, int avalue)
+        {
+            Name = name;
+            armorValue = avalue;
+        }
 
     }
 }
