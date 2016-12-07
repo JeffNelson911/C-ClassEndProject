@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace EndofClassProject
 {
    
-    class Room
+    public class Room
     {
         public int RID { get; set; }
         public string rName { get; set; }

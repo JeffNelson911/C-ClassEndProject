@@ -10,7 +10,6 @@ namespace EndofClassProject
     public class Creature
     {
         public string Name { get; set; }
-        public List<string> accessName;
         public string Desc { get; set; }
         public int HP { get; set; }
         public int AC { get; set; }
@@ -21,6 +20,7 @@ namespace EndofClassProject
         public bool isdead { get; set; }
 
         public List<Item> mobInventory;
+        public List<string> accessName;
         //public Image i { get; set; }
 
         /**
@@ -58,14 +58,71 @@ namespace EndofClassProject
             return result;
         }
 
+        //this method gives experience to the player.
         public void giveXP()
         {
             Player.EXP = Player.EXP + Exp;
         }
 
-        public void dropInv()
+        //This is here to make the creature give their entire inventory to the player if need be.
+        public void giveInv()
         {
             Player.Inventory.AddRange(mobInventory);
+            mobInventory.Clear();
+        }
+
+        //this is here to have a monster give an item to the player if we need it to.
+        public void giveItem(string name)
+        {
+            Item placeholder = null;
+            foreach (Item val in mobInventory)
+            {
+                if(val.Name.Equals(name))
+                {
+                    placeholder = val;
+                    Player.Inventory.Add(placeholder);
+                    break;
+                }
+                else if (val.accessName.Contains(name))
+                {
+                    placeholder = val;
+                    Player.Inventory.Add(placeholder);
+                    break;
+                }
+            }
+            mobInventory.Remove(placeholder);
+        }
+
+        //This method is here to allow the monster to drop an item into the room if we need it to.
+        public void dropItem(string name, Room room)
+        {
+            Item placeholder = null;
+            foreach (Item val in mobInventory)
+            {
+                if (val.Name.Equals(name))
+                {
+                    placeholder = val;
+                    room.itemList.Add(placeholder);
+                    break;
+                }
+                else if (val.accessName.Contains(name))
+                {
+                    placeholder = val;
+                    room.itemList.Add(placeholder);
+                    break;
+                }
+            }
+            mobInventory.Remove(placeholder);
+        }
+
+        //This method would be used to drop an item into the room.
+        public void dropInv(string name, Room room)
+        {
+            foreach (Item val in mobInventory)
+            {
+                room.itemList.AddRange(mobInventory);
+                mobInventory.Clear();
+            }
         }
     }
 }
