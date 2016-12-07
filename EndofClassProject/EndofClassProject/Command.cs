@@ -404,589 +404,590 @@ namespace EndofClassProject
             return quit;
         }
 
-        public bool roomList(string dir, int roomID)
-        {
-            bool playerMoved = false;
+        //This is the old code. Keeping it here just in case we need to revert.
+        //public bool roomList(string dir, int roomID)
+        //{
+        //    bool playerMoved = false;
 
-            if (dir == "north")
-            {
-                switch (roomID)
-                {
-                    case 0:
-                        Player.Location = 2;
-                        playerMoved = true;
-                        break;
-                    case 2:
-                        Player.Location = 7;
-                        playerMoved = true;
-                        break;
-                    case 8:
-                        Player.Location = 3;
-                        playerMoved = true;
-                        break;
-                    case 9:
-                        Player.Location = 10;
-                        playerMoved = true;
-                        break;
-                    case 10:
-                        Player.Location = 11;
-                        playerMoved = true;
-                        break;
-                    case 15:
-                        Player.Location = 17;
-                        playerMoved = true;
-                        break;
-                    case 17:
-                        Player.Location = 20;
-                        playerMoved = true;
-                        break;
-                    case 19:
-                        Player.Location = 18;
-                        playerMoved = true;
-                        break;
-                    case 24:
-                        Player.Location = 25;
-                        playerMoved = true;
-                        break;
-                    case 29:
-                        Player.Location = 26;
-                        playerMoved = true;
-                        break;
-                    case 32:
-                        Player.Location = 33;
-                        playerMoved = true;
-                        break;
-                    case 36:
-                        Player.Location = 37;
-                        playerMoved = true;
-                        break;
-                    case 38:
-                        Player.Location = 39;
-                        playerMoved = true;
-                        break;
-                    case 41:
-                        Player.Location = 32;
-                        playerMoved = true;
-                        break;
-                    case 42:
-                        Player.Location = 41;
-                        playerMoved = true;
-                        break;
-                    case 45:
-                        Player.Location = 43;
-                        playerMoved = true;
-                        break;
-                    case 46:
-                        Player.Location = 44;
-                        playerMoved = true;
-                        break;
-                    case 47:
-                        Player.Location = 46;
-                        playerMoved = true;
-                        break;
-                    case 52:
-                        Player.Location = 50;
-                        playerMoved = true;
-                        break;
-                    case 55:
-                        Player.Location = 54;
-                        playerMoved = true;
-                        break;
-                }
-            }
-            else if (dir == "east")
-            {
-                switch (roomID)
-                {
-                    case 0:
-                        Player.Location = 3;
-                        playerMoved = true;
-                        break;
-                    case 1:
-                        Player.Location = 0;
-                        playerMoved = true;
-                        break;
-                    case 2:
-                        Player.Location = 4;
-                        playerMoved = true;
-                        break;
-                    case 4:
-                        Player.Location = 5;
-                        playerMoved = true;
-                        break;
-                    case 6:
-                        Player.Location = 1;
-                        playerMoved = true;
-                        break;
-                    case 7:
-                        Player.Location = 9;
-                        playerMoved = true;
-                        break;
-                    case 10:
-                        Player.Location = 31;
-                        playerMoved = true;
-                        break;
-                    case 11:
-                        Player.Location = 12;
-                        playerMoved = true;
-                        break;
-                    case 12:
-                        Player.Location = 13;
-                        playerMoved = true;
-                        break;
-                    case 13:
-                        Player.Location = 15;
-                        playerMoved = true;
-                        break;
-                    case 14:
-                        Player.Location = 17;
-                        playerMoved = true;
-                        break;
-                    case 17:
-                        Player.Location = 16;
-                        playerMoved = true;
-                        break;
-                    case 16:
-                        Player.Location = 18;
-                        playerMoved = true;
-                        break;
-                    case 19:
-                        Player.Location = 20;
-                        playerMoved = true;
-                        break;
-                    case 23:
-                        Player.Location = 10;
-                        playerMoved = true;
-                        break;
-                    case 24:
-                        Player.Location = 23;
-                        playerMoved = true;
-                        break;
-                    case 25:
-                        Player.Location = 26;
-                        playerMoved = true;
-                        break;
-                    case 27:
-                        Player.Location = 24;
-                        playerMoved = true;
-                        break;
-                    case 28:
-                        Player.Location = 30;
-                        playerMoved = true;
-                        break;
-                    case 31:
-                        Player.Location = 32;
-                        playerMoved = true;
-                        break;
-                    case 37:
-                        Player.Location = 38;
-                        playerMoved = true;
-                        break;
-                    case 40:
-                        Player.Location = 39;
-                        playerMoved = true;
-                        break;
-                    case 42:
-                        Player.Location = 43;
-                        playerMoved = true;
-                        break;
-                    case 43:
-                        Player.Location = 44;
-                        playerMoved = true;
-                        break;
-                    case 48:
-                        Player.Location = 49;
-                        playerMoved = true;
-                        break;
-                    case 51:
-                        Player.Location = 50;
-                        playerMoved = true;
-                        break;
-                    case 53:
-                        Player.Location = 48;
-                        playerMoved = true;
-                        break;
-                    case 54:
-                        Player.Location = 53;
-                        playerMoved = true;
-                        break;
+        //    if (dir == "north")
+        //    {
+        //        switch (roomID)
+        //        {
+        //            case 0:
+        //                Player.Location = 2;
+        //                playerMoved = true;
+        //                break;
+        //            case 2:
+        //                Player.Location = 7;
+        //                playerMoved = true;
+        //                break;
+        //            case 8:
+        //                Player.Location = 3;
+        //                playerMoved = true;
+        //                break;
+        //            case 9:
+        //                Player.Location = 10;
+        //                playerMoved = true;
+        //                break;
+        //            case 10:
+        //                Player.Location = 11;
+        //                playerMoved = true;
+        //                break;
+        //            case 15:
+        //                Player.Location = 17;
+        //                playerMoved = true;
+        //                break;
+        //            case 17:
+        //                Player.Location = 20;
+        //                playerMoved = true;
+        //                break;
+        //            case 19:
+        //                Player.Location = 18;
+        //                playerMoved = true;
+        //                break;
+        //            case 24:
+        //                Player.Location = 25;
+        //                playerMoved = true;
+        //                break;
+        //            case 29:
+        //                Player.Location = 26;
+        //                playerMoved = true;
+        //                break;
+        //            case 32:
+        //                Player.Location = 33;
+        //                playerMoved = true;
+        //                break;
+        //            case 36:
+        //                Player.Location = 37;
+        //                playerMoved = true;
+        //                break;
+        //            case 38:
+        //                Player.Location = 39;
+        //                playerMoved = true;
+        //                break;
+        //            case 41:
+        //                Player.Location = 32;
+        //                playerMoved = true;
+        //                break;
+        //            case 42:
+        //                Player.Location = 41;
+        //                playerMoved = true;
+        //                break;
+        //            case 45:
+        //                Player.Location = 43;
+        //                playerMoved = true;
+        //                break;
+        //            case 46:
+        //                Player.Location = 44;
+        //                playerMoved = true;
+        //                break;
+        //            case 47:
+        //                Player.Location = 46;
+        //                playerMoved = true;
+        //                break;
+        //            case 52:
+        //                Player.Location = 50;
+        //                playerMoved = true;
+        //                break;
+        //            case 55:
+        //                Player.Location = 54;
+        //                playerMoved = true;
+        //                break;
+        //        }
+        //    }
+        //    else if (dir == "east")
+        //    {
+        //        switch (roomID)
+        //        {
+        //            case 0:
+        //                Player.Location = 3;
+        //                playerMoved = true;
+        //                break;
+        //            case 1:
+        //                Player.Location = 0;
+        //                playerMoved = true;
+        //                break;
+        //            case 2:
+        //                Player.Location = 4;
+        //                playerMoved = true;
+        //                break;
+        //            case 4:
+        //                Player.Location = 5;
+        //                playerMoved = true;
+        //                break;
+        //            case 6:
+        //                Player.Location = 1;
+        //                playerMoved = true;
+        //                break;
+        //            case 7:
+        //                Player.Location = 9;
+        //                playerMoved = true;
+        //                break;
+        //            case 10:
+        //                Player.Location = 31;
+        //                playerMoved = true;
+        //                break;
+        //            case 11:
+        //                Player.Location = 12;
+        //                playerMoved = true;
+        //                break;
+        //            case 12:
+        //                Player.Location = 13;
+        //                playerMoved = true;
+        //                break;
+        //            case 13:
+        //                Player.Location = 15;
+        //                playerMoved = true;
+        //                break;
+        //            case 14:
+        //                Player.Location = 17;
+        //                playerMoved = true;
+        //                break;
+        //            case 17:
+        //                Player.Location = 16;
+        //                playerMoved = true;
+        //                break;
+        //            case 16:
+        //                Player.Location = 18;
+        //                playerMoved = true;
+        //                break;
+        //            case 19:
+        //                Player.Location = 20;
+        //                playerMoved = true;
+        //                break;
+        //            case 23:
+        //                Player.Location = 10;
+        //                playerMoved = true;
+        //                break;
+        //            case 24:
+        //                Player.Location = 23;
+        //                playerMoved = true;
+        //                break;
+        //            case 25:
+        //                Player.Location = 26;
+        //                playerMoved = true;
+        //                break;
+        //            case 27:
+        //                Player.Location = 24;
+        //                playerMoved = true;
+        //                break;
+        //            case 28:
+        //                Player.Location = 30;
+        //                playerMoved = true;
+        //                break;
+        //            case 31:
+        //                Player.Location = 32;
+        //                playerMoved = true;
+        //                break;
+        //            case 37:
+        //                Player.Location = 38;
+        //                playerMoved = true;
+        //                break;
+        //            case 40:
+        //                Player.Location = 39;
+        //                playerMoved = true;
+        //                break;
+        //            case 42:
+        //                Player.Location = 43;
+        //                playerMoved = true;
+        //                break;
+        //            case 43:
+        //                Player.Location = 44;
+        //                playerMoved = true;
+        //                break;
+        //            case 48:
+        //                Player.Location = 49;
+        //                playerMoved = true;
+        //                break;
+        //            case 51:
+        //                Player.Location = 50;
+        //                playerMoved = true;
+        //                break;
+        //            case 53:
+        //                Player.Location = 48;
+        //                playerMoved = true;
+        //                break;
+        //            case 54:
+        //                Player.Location = 53;
+        //                playerMoved = true;
+        //                break;
 
-                }
-            }
-            else if (dir == "west")
-            {
-                switch (roomID)
-                {
-                    case 0:
-                        Player.Location = 1;
-                        playerMoved = true;
-                        break;
-                    case 1:
-                        Player.Location = 6;
-                        playerMoved = true;
-                        break;
-                    case 3:
-                        Player.Location = 0;
-                        playerMoved = true;
-                        break;
-                    case 4:
-                        Player.Location = 2;
-                        playerMoved = true;
-                        break;
-                    case 5:
-                        Player.Location = 4;
-                        playerMoved = true;
-                        break;
-                    case 9:
-                        Player.Location = 7;
-                        playerMoved = true;
-                        break;
-                    case 10:
-                        Player.Location = 23;
-                        playerMoved = true;
-                        break;
-                    case 12:
-                        Player.Location = 11;
-                        playerMoved = true;
-                        break;
-                    case 13:
-                        Player.Location = 12;
-                        playerMoved = true;
-                        break;
-                    case 15:
-                        Player.Location = 13;
-                        playerMoved = true;
-                        break;
-                    case 16:
-                        Player.Location = 17;
-                        playerMoved = true;
-                        break;
-                    case 17:
-                        Player.Location = 14;
-                        playerMoved = true;
-                        break;
-                    case 18:
-                        Player.Location = 16;
-                        playerMoved = true;
-                        break;
-                    case 20:
-                        Player.Location = 11;
-                        playerMoved = true;
-                        break;
-                    case 23:
-                        Player.Location = 24;
-                        playerMoved = true;
-                        break;
-                    case 24:
-                        Player.Location = 27;
-                        playerMoved = true;
-                        break;
-                    case 25:
-                        Player.Location = 27;
-                        playerMoved = true;
-                        break;
-                    case 26:
-                        Player.Location = 25;
-                        playerMoved = true;
-                        break;
-                    case 27:
-                        Player.Location = 55;
-                        playerMoved = true;
-                        break;
-                    case 30:
-                        Player.Location = 28;
-                        playerMoved = true;
-                        break;
-                    case 31:
-                        Player.Location = 10;
-                        playerMoved = true;
-                        break;
-                    case 32:
-                        Player.Location = 31;
-                        playerMoved = true;
-                        break;
-                    case 38:
-                        Player.Location = 37;
-                        playerMoved = true;
-                        break;
-                    case 39:
-                        Player.Location = 40;
-                        playerMoved = true;
-                        break;
-                    case 40:
-                        Player.Location = 36;
-                        playerMoved = true;
-                        break;
-                    case 41:
-                        Player.Location = 54;
-                        playerMoved = true;
-                        break;
-                    case 43:
-                        Player.Location = 42;
-                        playerMoved = true;
-                        break;
-                    case 44:
-                        Player.Location = 43;
-                        playerMoved = true;
-                        break;
-                    case 48:
-                        Player.Location = 53;
-                        playerMoved = true;
-                        break;
-                    case 49:
-                        Player.Location = 48;
-                        playerMoved = true;
-                        break;
-                    case 50:
-                        Player.Location = 51;
-                        playerMoved = true;
-                        break;
-                }
-            }
-            else if (dir == "south")
-            {
-                switch (roomID)
-                {
-                    case 2:
-                        Player.Location = 0;
-                        playerMoved = true;
-                        break;
-                    case 3:
-                        Player.Location = 8;
-                        playerMoved = true;
-                        break;
-                    case 7:
-                        Player.Location = 2;
-                        playerMoved = true;
-                        break;
-                    case 10:
-                        Player.Location = 9;
-                        playerMoved = true;
-                        break;
-                    case 11:
-                        Player.Location = 10;
-                        playerMoved = true;
-                        break;
-                    case 18:
-                        Player.Location = 19;
-                        playerMoved = true;
-                        break;
-                    case 20:
-                        Player.Location = 17;
-                        playerMoved = true;
-                        break;
-                    case 25:
-                        Player.Location = 24;
-                        playerMoved = true;
-                        break;
-                    case 26:
-                        Player.Location = 29;
-                        playerMoved = true;
-                        break;
-                    case 32:
-                        Player.Location = 41;
-                        playerMoved = true;
-                        break;
-                    case 33:
-                        Player.Location = 32;
-                        playerMoved = true;
-                        break;
-                    case 37:
-                        Player.Location = 36;
-                        playerMoved = true;
-                        break;
-                    case 39:
-                        Player.Location = 38;
-                        playerMoved = true;
-                        break;
-                    case 41:
-                        Player.Location = 42;
-                        playerMoved = true;
-                        break;
-                    case 43:
-                        Player.Location = 45;
-                        playerMoved = true;
-                        break;
-                    case 44:
-                        Player.Location = 46;
-                        playerMoved = true;
-                        break;
-                    case 46:
-                        Player.Location = 47;
-                        playerMoved = true;
-                        break;
-                    case 50:
-                        Player.Location = 52;
-                        playerMoved = true;
-                        break;
-                    case 54:
-                        Player.Location = 55;
-                        playerMoved = true;
-                        break;
-                    case 55:
-                        Player.Location = 27;
-                        playerMoved = true;
-                        break;
-                }
-            }
-            else if (dir == "northwest")
-            {
-                switch (roomID)
-                {
-                    case 17:
-                        Player.Location = 17;
-                        playerMoved = true;
-                        break;
-                    case 25:
-                        Player.Location = 28;
-                        playerMoved = true;
-                        break;
-                    case 33:
-                        Player.Location = 35;
-                        playerMoved = true;
-                        break;
-                    case 38:
-                        Player.Location = 40;
-                        playerMoved = true;
-                        break;
-                    case 49:
-                        Player.Location = 47;
-                        playerMoved = true;
-                        break;
-                    case 50:
-                        Player.Location = 48;
-                        playerMoved = true;
-                        break;
-                }
-            }
+        //        }
+        //    }
+        //    else if (dir == "west")
+        //    {
+        //        switch (roomID)
+        //        {
+        //            case 0:
+        //                Player.Location = 1;
+        //                playerMoved = true;
+        //                break;
+        //            case 1:
+        //                Player.Location = 6;
+        //                playerMoved = true;
+        //                break;
+        //            case 3:
+        //                Player.Location = 0;
+        //                playerMoved = true;
+        //                break;
+        //            case 4:
+        //                Player.Location = 2;
+        //                playerMoved = true;
+        //                break;
+        //            case 5:
+        //                Player.Location = 4;
+        //                playerMoved = true;
+        //                break;
+        //            case 9:
+        //                Player.Location = 7;
+        //                playerMoved = true;
+        //                break;
+        //            case 10:
+        //                Player.Location = 23;
+        //                playerMoved = true;
+        //                break;
+        //            case 12:
+        //                Player.Location = 11;
+        //                playerMoved = true;
+        //                break;
+        //            case 13:
+        //                Player.Location = 12;
+        //                playerMoved = true;
+        //                break;
+        //            case 15:
+        //                Player.Location = 13;
+        //                playerMoved = true;
+        //                break;
+        //            case 16:
+        //                Player.Location = 17;
+        //                playerMoved = true;
+        //                break;
+        //            case 17:
+        //                Player.Location = 14;
+        //                playerMoved = true;
+        //                break;
+        //            case 18:
+        //                Player.Location = 16;
+        //                playerMoved = true;
+        //                break;
+        //            case 20:
+        //                Player.Location = 11;
+        //                playerMoved = true;
+        //                break;
+        //            case 23:
+        //                Player.Location = 24;
+        //                playerMoved = true;
+        //                break;
+        //            case 24:
+        //                Player.Location = 27;
+        //                playerMoved = true;
+        //                break;
+        //            case 25:
+        //                Player.Location = 27;
+        //                playerMoved = true;
+        //                break;
+        //            case 26:
+        //                Player.Location = 25;
+        //                playerMoved = true;
+        //                break;
+        //            case 27:
+        //                Player.Location = 55;
+        //                playerMoved = true;
+        //                break;
+        //            case 30:
+        //                Player.Location = 28;
+        //                playerMoved = true;
+        //                break;
+        //            case 31:
+        //                Player.Location = 10;
+        //                playerMoved = true;
+        //                break;
+        //            case 32:
+        //                Player.Location = 31;
+        //                playerMoved = true;
+        //                break;
+        //            case 38:
+        //                Player.Location = 37;
+        //                playerMoved = true;
+        //                break;
+        //            case 39:
+        //                Player.Location = 40;
+        //                playerMoved = true;
+        //                break;
+        //            case 40:
+        //                Player.Location = 36;
+        //                playerMoved = true;
+        //                break;
+        //            case 41:
+        //                Player.Location = 54;
+        //                playerMoved = true;
+        //                break;
+        //            case 43:
+        //                Player.Location = 42;
+        //                playerMoved = true;
+        //                break;
+        //            case 44:
+        //                Player.Location = 43;
+        //                playerMoved = true;
+        //                break;
+        //            case 48:
+        //                Player.Location = 53;
+        //                playerMoved = true;
+        //                break;
+        //            case 49:
+        //                Player.Location = 48;
+        //                playerMoved = true;
+        //                break;
+        //            case 50:
+        //                Player.Location = 51;
+        //                playerMoved = true;
+        //                break;
+        //        }
+        //    }
+        //    else if (dir == "south")
+        //    {
+        //        switch (roomID)
+        //        {
+        //            case 2:
+        //                Player.Location = 0;
+        //                playerMoved = true;
+        //                break;
+        //            case 3:
+        //                Player.Location = 8;
+        //                playerMoved = true;
+        //                break;
+        //            case 7:
+        //                Player.Location = 2;
+        //                playerMoved = true;
+        //                break;
+        //            case 10:
+        //                Player.Location = 9;
+        //                playerMoved = true;
+        //                break;
+        //            case 11:
+        //                Player.Location = 10;
+        //                playerMoved = true;
+        //                break;
+        //            case 18:
+        //                Player.Location = 19;
+        //                playerMoved = true;
+        //                break;
+        //            case 20:
+        //                Player.Location = 17;
+        //                playerMoved = true;
+        //                break;
+        //            case 25:
+        //                Player.Location = 24;
+        //                playerMoved = true;
+        //                break;
+        //            case 26:
+        //                Player.Location = 29;
+        //                playerMoved = true;
+        //                break;
+        //            case 32:
+        //                Player.Location = 41;
+        //                playerMoved = true;
+        //                break;
+        //            case 33:
+        //                Player.Location = 32;
+        //                playerMoved = true;
+        //                break;
+        //            case 37:
+        //                Player.Location = 36;
+        //                playerMoved = true;
+        //                break;
+        //            case 39:
+        //                Player.Location = 38;
+        //                playerMoved = true;
+        //                break;
+        //            case 41:
+        //                Player.Location = 42;
+        //                playerMoved = true;
+        //                break;
+        //            case 43:
+        //                Player.Location = 45;
+        //                playerMoved = true;
+        //                break;
+        //            case 44:
+        //                Player.Location = 46;
+        //                playerMoved = true;
+        //                break;
+        //            case 46:
+        //                Player.Location = 47;
+        //                playerMoved = true;
+        //                break;
+        //            case 50:
+        //                Player.Location = 52;
+        //                playerMoved = true;
+        //                break;
+        //            case 54:
+        //                Player.Location = 55;
+        //                playerMoved = true;
+        //                break;
+        //            case 55:
+        //                Player.Location = 27;
+        //                playerMoved = true;
+        //                break;
+        //        }
+        //    }
+        //    else if (dir == "northwest")
+        //    {
+        //        switch (roomID)
+        //        {
+        //            case 17:
+        //                Player.Location = 17;
+        //                playerMoved = true;
+        //                break;
+        //            case 25:
+        //                Player.Location = 28;
+        //                playerMoved = true;
+        //                break;
+        //            case 33:
+        //                Player.Location = 35;
+        //                playerMoved = true;
+        //                break;
+        //            case 38:
+        //                Player.Location = 40;
+        //                playerMoved = true;
+        //                break;
+        //            case 49:
+        //                Player.Location = 47;
+        //                playerMoved = true;
+        //                break;
+        //            case 50:
+        //                Player.Location = 48;
+        //                playerMoved = true;
+        //                break;
+        //        }
+        //    }
 
-            else if (dir == "northeast")
-            {
-                switch (roomID)
-                {
-                    case 1:
-                        Player.Location = 2;
-                        playerMoved = true;
-                        break;
-                    case 2:
-                        Player.Location = 9;
-                        playerMoved = true;
-                        break;
-                    case 12:
-                        Player.Location = 14;
-                        playerMoved = true;
-                        break;
-                    case 13:
-                        Player.Location = 27;
-                        playerMoved = true;
-                        break;
-                    case 21:
-                        Player.Location = 19;
-                        playerMoved = true;
-                        break;
-                    case 35:
-                        Player.Location = 36;
-                        playerMoved = true;
-                        break;
-                    case 33:
-                        Player.Location = 34;
-                        playerMoved = true;
-                        break;
-                    case 37:
-                        Player.Location = 39;
-                        playerMoved = true;
-                        break;
-                    case 48:
-                        Player.Location = 47;
-                        playerMoved = true;
-                        break;
-                    case 50:
-                        Player.Location = 49;
-                        playerMoved = true;
-                        break;
-                }
-            }
+        //    else if (dir == "northeast")
+        //    {
+        //        switch (roomID)
+        //        {
+        //            case 1:
+        //                Player.Location = 2;
+        //                playerMoved = true;
+        //                break;
+        //            case 2:
+        //                Player.Location = 9;
+        //                playerMoved = true;
+        //                break;
+        //            case 12:
+        //                Player.Location = 14;
+        //                playerMoved = true;
+        //                break;
+        //            case 13:
+        //                Player.Location = 27;
+        //                playerMoved = true;
+        //                break;
+        //            case 21:
+        //                Player.Location = 19;
+        //                playerMoved = true;
+        //                break;
+        //            case 35:
+        //                Player.Location = 36;
+        //                playerMoved = true;
+        //                break;
+        //            case 33:
+        //                Player.Location = 34;
+        //                playerMoved = true;
+        //                break;
+        //            case 37:
+        //                Player.Location = 39;
+        //                playerMoved = true;
+        //                break;
+        //            case 48:
+        //                Player.Location = 47;
+        //                playerMoved = true;
+        //                break;
+        //            case 50:
+        //                Player.Location = 49;
+        //                playerMoved = true;
+        //                break;
+        //        }
+        //    }
 
-            else if (dir == "southwest")
-            {
-                switch (roomID)
-                {
-                    case 2:
-                        Player.Location = 1;
-                        playerMoved = true;
-                        break;
-                    case 9:
-                        Player.Location = 2;
-                        playerMoved = true;
-                        break;
-                    case 14:
-                        Player.Location = 12;
-                        playerMoved = true;
-                        break;
-                    case 19:
-                        Player.Location = 21;
-                        playerMoved = true;
-                        break;
-                    case 30:
-                        Player.Location = 25;
-                        playerMoved = true;
-                        break;
-                    case 36:
-                        Player.Location = 35;
-                        playerMoved = true;
-                        break;
-                    case 39:
-                        Player.Location = 37;
-                        playerMoved = true;
-                        break;
-                    case 34:
-                        Player.Location = 33;
-                        playerMoved = true;
-                        break;
-                    case 47:
-                        Player.Location = 48;
-                        playerMoved = true;
-                        break;
-                    case 49:
-                        Player.Location = 50;
-                        playerMoved = true;
-                        break;
+        //    else if (dir == "southwest")
+        //    {
+        //        switch (roomID)
+        //        {
+        //            case 2:
+        //                Player.Location = 1;
+        //                playerMoved = true;
+        //                break;
+        //            case 9:
+        //                Player.Location = 2;
+        //                playerMoved = true;
+        //                break;
+        //            case 14:
+        //                Player.Location = 12;
+        //                playerMoved = true;
+        //                break;
+        //            case 19:
+        //                Player.Location = 21;
+        //                playerMoved = true;
+        //                break;
+        //            case 30:
+        //                Player.Location = 25;
+        //                playerMoved = true;
+        //                break;
+        //            case 36:
+        //                Player.Location = 35;
+        //                playerMoved = true;
+        //                break;
+        //            case 39:
+        //                Player.Location = 37;
+        //                playerMoved = true;
+        //                break;
+        //            case 34:
+        //                Player.Location = 33;
+        //                playerMoved = true;
+        //                break;
+        //            case 47:
+        //                Player.Location = 48;
+        //                playerMoved = true;
+        //                break;
+        //            case 49:
+        //                Player.Location = 50;
+        //                playerMoved = true;
+        //                break;
 
-                }
-            }
+        //        }
+        //    }
 
-            else if (dir == "southeast")
-            {
-                switch (roomID)
-                {
-                    case 26:
-                        Player.Location = 25;
-                        playerMoved = true;
-                        break;
-                    case 35:
-                        Player.Location = 33;
-                        playerMoved = true;
-                        break;
-                    case 36:
-                        Player.Location = 34;
-                        playerMoved = true;
-                        break;
-                    case 40:
-                        Player.Location = 38;
-                        playerMoved = true;
-                        break;
-                    case 47:
-                        Player.Location = 49;
-                        playerMoved = true;
-                        break;
-                    case 48:
-                        Player.Location = 50;
-                        playerMoved = true;
-                        break;
-                }
-            }
-            return playerMoved;
-        }
+        //    else if (dir == "southeast")
+        //    {
+        //        switch (roomID)
+        //        {
+        //            case 26:
+        //                Player.Location = 25;
+        //                playerMoved = true;
+        //                break;
+        //            case 35:
+        //                Player.Location = 33;
+        //                playerMoved = true;
+        //                break;
+        //            case 36:
+        //                Player.Location = 34;
+        //                playerMoved = true;
+        //                break;
+        //            case 40:
+        //                Player.Location = 38;
+        //                playerMoved = true;
+        //                break;
+        //            case 47:
+        //                Player.Location = 49;
+        //                playerMoved = true;
+        //                break;
+        //            case 48:
+        //                Player.Location = 50;
+        //                playerMoved = true;
+        //                break;
+        //        }
+        //    }
+        //    return playerMoved;
+        //}
 
         public bool checkMob()
         {
