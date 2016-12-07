@@ -187,43 +187,43 @@ namespace EndofClassProject
             {
                 playerMoved = true;
 
-                if (dir.Equals("n") || dir.Equals("north"))
+                if (direction.Equals("n") || direction.Equals("north"))
                 {
                     dir = world.worldList[Player.Location].north;
                 }
-                else if (dir.Equals("s") || dir.Equals("south"))
+                else if (direction.Equals("s") || direction.Equals("south"))
                 {
                     dir = world.worldList[Player.Location].south;
                 }
-                else if (dir.Equals("e") || dir.Equals("east"))
+                else if (direction.Equals("e") || direction.Equals("east"))
                 {
                     dir = world.worldList[Player.Location].east;
                 }
-                else if (dir.Equals("w") || dir.Equals("west"))
+                else if (direction.Equals("w") || direction.Equals("west"))
                 {
                     dir = world.worldList[Player.Location].west;
                 }
-                else if (dir.Equals("ne") || dir.Equals("northeast"))
+                else if (direction.Equals("ne") || direction.Equals("northeast"))
                 {
                     dir = world.worldList[Player.Location].northeast;
                 }
-                else if (dir.Equals("nw") || dir.Equals("northwest"))
+                else if (direction.Equals("nw") || direction.Equals("northwest"))
                 {
                     dir = world.worldList[Player.Location].northwest;
                 }
-                else if (dir.Equals("se") || dir.Equals("southeast"))
+                else if (direction.Equals("se") || direction.Equals("southeast"))
                 {
                     dir = world.worldList[Player.Location].southeast;
                 }
-                else if (dir.Equals("sw") || dir.Equals("southwest"))
+                else if (direction.Equals("sw") || direction.Equals("southwest"))
                 {
                     dir = world.worldList[Player.Location].southwest;
                 }
-                else if (dir.Equals("u") || dir.Equals("up"))
+                else if (direction.Equals("u") || direction.Equals("up"))
                 {
                     dir = world.worldList[Player.Location].up;
                 }
-                else if (dir.Equals("d") || dir.Equals("down"))
+                else if (direction.Equals("d") || direction.Equals("down"))
                 {
                     dir = world.worldList[Player.Location].down;
                 }
