@@ -424,15 +424,6 @@ namespace EndofClassProject
             room55.exitList.Add("South");
             worldList.Add(room55);
 
-
-
-
         }
-        public void RemoveMonster()
-        {
-
-        }
-
-
     }
 }

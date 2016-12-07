@@ -19,7 +19,7 @@ namespace EndofClassProject
         public int Lvl { get; set; }
         public int Exp { get; set; }
         public bool isdead { get; set; }
-        public int given { get; set; }
+
         public List<Item> mobInventory;
         //public Image i { get; set; }
 
@@ -30,7 +30,6 @@ namespace EndofClassProject
          * in main form and pass it as a room constructor requirement??
          * 
          */
-
 
         public Creature()
         {
@@ -45,7 +44,6 @@ namespace EndofClassProject
             DMG = ATK+Lvl;
             Exp = 10;
             isdead = false;
-            given = 0;
             //i = Image.FromFile("Bestiary.png");
         }
 
@@ -60,9 +58,14 @@ namespace EndofClassProject
             return result;
         }
 
-        public void giveXP(Player player)
+        public void giveXP()
         {
-            player.EXP = player.EXP + Exp;
+            Player.EXP = Player.EXP + Exp;
+        }
+
+        public void dropInv()
+        {
+            Player.Inventory.AddRange(mobInventory);
         }
     }
 }

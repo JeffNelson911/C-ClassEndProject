@@ -67,18 +67,5 @@ namespace EndofClassProject
             }
                 return check;
         }
-        public bool hasGiven(Creature npc)
-        {
-            bool flag = false;
-            if(npc.given == 0)
-            {
-                return flag;
-            }
-            else
-            {
-                flag = true;
-            }
-            return flag;
-        }
     }
 }
