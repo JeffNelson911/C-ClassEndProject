@@ -11,6 +11,13 @@ namespace EndofClassProject
     {
         //public World world = new World();
         public LinkedWorld world = new LinkedWorld();
+        BladeQuest blade;
+        FlowerQuest flower;
+        Command()
+        {
+            flower = new FlowerQuest();
+            blade = new BladeQuest();
+        }
 
         public string Handler(string input)
         {
@@ -111,71 +118,50 @@ namespace EndofClassProject
             return post;
         }
 
-        //public string QuestHandler(string v,string npc, string act)
-        //{
+        public string QuestHandler(string v, string npc, string act)
+        {
 
-        //    string verb;//This will be the placeholder to determine the verb.
-        //    string action;//This will be the placeholder to determine the action.
-        //    string post = "Try again?";//This will be for holding the output.
-        //    string actor;// This is where the NPC name will go
-
-
-        //    verb = v;
-
-        //    actor = npc;
-
-        //    action = act;
-
-        //    Creature x;
-
-        //    foreach (Creature z in world.worldList[Player.Location].mobList)
-        //    {
-        //        if(z.Name == actor)
-        //        {
-        //            x = z;
-        //            break;
-        //        }
-        //        else if(z.accessName.Contains(actor))
-        //        {
-        //            x = z;
-        //            break;
-        //        }
-        //    }
-
-        //    switch(action)
-        //    {
-        //        case "flower":
-        //            post = "I know about the Flower";
-        //            break;
-        //        case "blade":
-        //            post = "I know about the blade";
-        //            break;
-
-        //    }
-
-        //   return post;
-        //}
-
-        //public string Go(string direction)
-        //{
-        //    string go = "";
-        //    bool playerMoved;
-
-        //    playerMoved = roomList(direction, world.worldList[Player.Location].RID);
-
-        //    if (playerMoved == true)
-        //    {
-        //        go = "You move to the " + direction + ".";
-        //        Look();
-        //    }
-        //    else
-        //    {
-        //        go = "You can't move to the " + direction + ".";
-        //    }
+            string verb;//This will be the placeholder to determine the verb.
+            string action;//This will be the placeholder to determine the action.
+            string post = "Try again?";//This will be for holding the output.
+            string actor;// This is where the NPC name will go
 
 
-        //    return go;
-        //}
+            verb = v;
+
+            actor = npc;
+
+            action = act;
+
+            Creature x;
+
+            foreach (Creature z in world.worldList[Player.Location].mobList)
+            {
+                if (z.Name == actor)
+                {
+                    x = z;
+                    break;
+                }
+                else if (z.accessName.Contains(actor))
+                {
+                    x = z;
+                    break;
+                }
+            }
+
+            switch (action)
+            {
+                case "flower":
+                    post = flower.displayPrompt("flower");
+                    break;
+                case "blade":
+                    post = "I know about the blade";
+                    break;
+
+            }
+
+            return post;
+        }
 
         public string Go(string direction)
         {

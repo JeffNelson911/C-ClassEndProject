@@ -80,7 +80,6 @@ namespace EndofClassProject
             return given;
         }
 
-
         public string displayPrompt(string key)
         {
             switch(key)

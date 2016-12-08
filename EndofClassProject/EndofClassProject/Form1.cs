@@ -35,7 +35,7 @@ namespace EndofClassProject
         private void submitButton_Click(object sender, EventArgs e)
         {
             displayTextBox.AppendText("\n" + com.Handler(commandTextBox.Text));
-
+            displayTextBox.ScrollToCaret();
             commandTextBox.SelectionStart = 0;
             commandTextBox.SelectionLength = commandTextBox.Text.Length;
 
