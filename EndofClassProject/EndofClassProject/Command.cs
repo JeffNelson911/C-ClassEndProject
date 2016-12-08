@@ -220,15 +220,18 @@ namespace EndofClassProject
                     {
                         case "flower":
                             post = flower.displayPrompt("flower");
+                            flower.checkQuest();
                             break;
                         case "blade":
                             post = "I know about the blade";
                             break;
                         case "type":
                             post = flower.displayPrompt("crysantheum");
+                            flower.checkQuest();
                             break;
                         case "guarding":
                             post = flower.displayPrompt("guarding");
+                            flower.checkQuest();
                             break;
 
                     }
@@ -241,15 +244,18 @@ namespace EndofClassProject
                     {
                         case "flower":
                             post = flower.displayPrompt("flower");
+                            flower.checkQuest();
                             break;
                         case "blade":
                             post = "I know about the blade";
                             break;
                         case "type":
                             post = flower.displayPrompt("crysantheum");
+                            flower.checkQuest();
                             break;
                         case "guarding":
                             post = flower.displayPrompt("guarding");
+                            flower.checkQuest();
                             break;
 
                     }
