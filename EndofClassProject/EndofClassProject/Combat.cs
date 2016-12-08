@@ -8,6 +8,30 @@ namespace EndofClassProject
 {
     class Combat
     {
+
+        public string PlayerCombat(Creature bob)
+        {
+            int damage = 0;
+
+            damage = Player.weaponAttack();
+
+            bob.HP = bob.HP - damage;
+
+            return damage.ToString();
+        }
+
+        public string MobCombat(Creature bob)
+        {
+            int damage = 0;
+
+            damage = bob.rollDamage();
+
+            Player.HP = Player.HP - damage;
+
+            return damage.ToString();
+        }
+
+
         //Creature placeHolder = null;
         //int damage = 0;
             //if (mobListBox.SelectedIndex != -1)
