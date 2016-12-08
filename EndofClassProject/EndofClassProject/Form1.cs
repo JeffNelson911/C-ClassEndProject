@@ -27,7 +27,7 @@ namespace EndofClassProject
         private void questLogButton_Click(object sender, EventArgs e)
         {
             Form1 form = new Form1();
-            QuestLog questLog = new QuestLog();
+            QuestLog questLog = new QuestLog(com.world.questList);
             questLog.ShowDialog();
 
         }

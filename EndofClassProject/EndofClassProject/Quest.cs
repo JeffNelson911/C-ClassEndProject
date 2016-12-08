@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace EndofClassProject
 {
-    class Quest
+    public class Quest
     {
         public string questName;
         public string[] keywords;

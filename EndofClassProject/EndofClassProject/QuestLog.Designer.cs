@@ -40,9 +40,9 @@
             this.questLogListBox.FormattingEnabled = true;
             this.questLogListBox.Location = new System.Drawing.Point(12, 25);
             this.questLogListBox.Name = "questLogListBox";
-            this.questLogListBox.ScrollAlwaysVisible = true;
             this.questLogListBox.Size = new System.Drawing.Size(190, 160);
             this.questLogListBox.TabIndex = 0;
+            this.questLogListBox.SelectedValueChanged += new System.EventHandler(this.questLogListBox_SelectedValueChanged);
             // 
             // returnButton
             // 
@@ -58,7 +58,6 @@
             // 
             this.questLogTextBox.BackColor = System.Drawing.Color.White;
             this.questLogTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.questLogTextBox.Enabled = false;
             this.questLogTextBox.Location = new System.Drawing.Point(210, 25);
             this.questLogTextBox.Name = "questLogTextBox";
             this.questLogTextBox.ReadOnly = true;

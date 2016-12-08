@@ -9,19 +9,19 @@ using System.Threading.Tasks;
 namespace EndofClassProject
 {
 
-    public class roomNodes
-    {
-
-    }
-
     public class LinkedWorld
     {
         public List<Room> worldList = new List<Room>();
+        public List<Quest> questList = new List<Quest>();
         
-        //public List<Quest> questList = new List<Quest>();
         public LinkedWorld()
         {
+            FlowerQuest flower = new FlowerQuest();
+            BladeQuest blade = new BladeQuest();
+
             makeWorld();
+            questList.Add(flower);
+            questList.Add(blade);
         }
 
         public void makeWorld()
