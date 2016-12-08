@@ -111,7 +111,7 @@ namespace EndofClassProject
                 switch (verb)
                 {
                     case "ask":
-                        //post = QuestHandler("ask", npc, action);
+                        post = QuestHandler("ask", npc, action);
                         
                         break;
                 }
