@@ -208,10 +208,15 @@ namespace EndofClassProject
             flower.Name = "A rare crysantheum flower";
             flower.accessName.Add("crysantheum");
             flower.accessName.Add("flower");
+            Item blade = new Item();
+            blade.Name = "The Vorpal Blade";
+            blade.accessName.Add("blade");
             wizard.Name = "Wizard Merlin";
             wizard.accessName.Add("merlin");
 
             room1.mobList.Add(wizard);
+            room14.itemList.Add(flower);
+            room19.itemList.Add(blade);
 
             
         }
