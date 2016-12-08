@@ -31,6 +31,7 @@ namespace EndofClassProject
             Lvl = 1;
             EXP = 0;
             Location = 1;
+            Inventory = new List<Item>();
             Armor = new Armor("Tattered cloth", 0);
             Weapon = new Weapon("Stick!", 1);
         }

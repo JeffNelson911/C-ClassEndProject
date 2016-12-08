@@ -447,6 +447,7 @@ namespace EndofClassProject
                 if (val.accessName.Contains(Name))
                 {
                     placeHolder = val;
+                    MessageBox.Show(placeHolder.Name);
                     break;
                 }
                 else
@@ -455,10 +456,11 @@ namespace EndofClassProject
 
                 }
             }
+           
             if (placeHolder != null)//If the placeholder has an item, do this.
             {
-                Player.Inventory.Add(placeHolder);
                 world.worldList[Player.Location].itemList.Remove(placeHolder);
+                Player.Inventory.Add(placeHolder);
                 get = "\nYou pick up the " + placeHolder.Name;
             }
             else

@@ -76,7 +76,6 @@
     <Compile Include="Singleton.cs" />
     <Compile Include="Treasure.cs" />
     <Compile Include="Weapon.cs" />
-    <Compile Include="World.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
