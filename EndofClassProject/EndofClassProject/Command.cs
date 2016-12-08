@@ -98,6 +98,7 @@ namespace EndofClassProject
                 {
                     case "ask":
                         //post = QuestHandler("ask", npc, action);
+                        
                         break;
                 }
             }

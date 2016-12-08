@@ -10,7 +10,7 @@ namespace EndofClassProject
     {
 
         private List<Item> inventory = new List<Item>();
-
+        private string[] prompts = { "The blade is said to be in a room that has dim lighting and no windows, possibly underground", "It is said that the blade is magical that it is a transparent ghostly blade", "It is said that a pack of goblins are guarding the blade but cannot touch it." };
 
         public BladeQuest()
         {
@@ -18,6 +18,7 @@ namespace EndofClassProject
             keywords = new string[5];
             keywords[0] = "blade";
             keywords[1] = "vorpal";
+            
             description = "We need the rare Vorpal Blade for reason.";
             qId = 1;
             prompt = "We need the Vorpal Blade. It is said to be a powerful weapon that can pierce any defense. Can you find it for me?";
@@ -81,6 +82,22 @@ namespace EndofClassProject
         //        return given;
         //    }
         //}
+        public string displayPrompt(string key)
+        {
+            switch (key)
+            {
+                case "blade":
+                    string prompt = prompts[0];
+                    break;
+                case "vorpal":
+                    prompt = prompts[1];
+                    break;
+                case "guarding":
+                    prompt = prompts[2];
+                    break;
+            }
+            return prompt;
+        }
     }
 }
 
