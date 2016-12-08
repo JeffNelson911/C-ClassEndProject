@@ -52,10 +52,12 @@ namespace EndofClassProject
                     }
                     if (placeholder != null)
                     {
+                        
                         state++;
                     }
                     break;
                 case 2:
+                    description += "\n Quest Complete";
                     break;
             }
         }
@@ -100,5 +102,7 @@ namespace EndofClassProject
         {
             questGiver = s;
         }
+
+ 
     }
 }

@@ -220,7 +220,9 @@ namespace EndofClassProject
                     {
                         case "flower":
                             post = flower.displayPrompt("flower");
+                            flower.state = 1;
                             flower.checkQuest();
+
                             break;
                         case "blade":
                             post = "I know about the blade";

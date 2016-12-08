@@ -31,22 +31,22 @@ namespace EndofClassProject
             Room room1 = new Room(1, "Outside The Tower", "The tower you seek is here. The outside is surrounded by a relatively wide plain, but despite the plain demeanour, all know that the tower is bad news.");
             Room room2 = new Room(2, "Path to the Tower", "The tower grows larger now that you are getting closer to it. There are a few branching paths at this point that lead into the surrounding plains.");
             Room room3 = new Room(3, "Path through the Forest", "The doors of the tower are before you, large and eldritch. It was as if the architect of this place was hired explicitly to make this door the most foreboding door it could possibly be.");
-            Room room4 = new Room(4, "A Field of Wheat", " ");
-            Room room5 = new Room(5, "Tower Entrance", " ");
-            Room room6 = new Room(6, "First Level of the Tower", " ");
-            Room room7 = new Room(7, "Second Level of the Tower", " ");
-            Room room8 = new Room(8, "Third Level of the Tower", " ");
-            Room room9 = new Room(9, "Library", " ");
-            Room room10 = new Room(10, "Office", " ");
-            Room room11 = new Room(11, "Portal to Somewhere?", " ");
-            Room room12 = new Room(12, "A Dark, Smelly, No-Good, Rotten Cave", " ");
-            Room room13 = new Room(13, "Deep within the Woodland.", " ");
-            Room room14 = new Room(14, "A Peaceful Grove", " ");
-            Room room15 = new Room(15, "Path to the Cave", " ");
-            Room room16 = new Room(16, "Passage down into the Horrible Cave", " ");
-            Room room17 = new Room(17, "Twisting Paths of the Cave", " ");
-            Room room18 = new Room(18, "Deeper into the Cave", " ");
-            Room room19 = new Room(19, "A hoard of Treasure", " ");
+            Room room4 = new Room(4, "A Field of Wheat", "A lovely field of golden Wheat as far as the eye can see");
+            Room room5 = new Room(5, "Tower Entrance", "The entrance to the Mages Tower. You can feel the surging of magic ");
+            Room room6 = new Room(6, "First Level of the Tower", "This level is filled with class rooms and students moving about ");
+            Room room7 = new Room(7, "Second Level of the Tower", "This level of the tower seems quieter filled with the dorms");
+            Room room8 = new Room(8, "Third Level of the Tower", "This level of the Tower seems the Quietest so far seems like the library and an office are on this level");
+            Room room9 = new Room(9, "Library", "A near silent room filled with books and students");
+            Room room10 = new Room(10, "Office", "The Arch Mage's Office you hear the hum of active magic near by.");
+            Room room11 = new Room(11, "Portal to Somewhere?", "A swirling mass of Arcane that flashes before your eyes as you enter it blinding you as you feel weightless for a moment.");
+            Room room12 = new Room(12, "A Dark, Smelly, No-Good, Rotten Cave", "A dark cave that seems to have tracks of activity littering the entrance");
+            Room room13 = new Room(13, "Deep within the Woodland.", "This forest seems to be eerily quiet as your head deeper into the forest.");
+            Room room14 = new Room(14, "A Peaceful Grove", "A quiet grove that holds a witch looking at the sky and a wolf at her side. You notice a lovely crimson flower near by.");
+            Room room15 = new Room(15, "Path to the Cave", "As you look at the cave delving deeper down the path to the cave you feel the last remains of fresh air behind you ");
+            Room room16 = new Room(16, "Passage down into the Horrible Cave", "The path way seems to get steeper as you travel the air is musty as you continue down to the bowels of the cave");
+            Room room17 = new Room(17, "Twisting Paths of the Cave", "you feel you could get lost if you are not careful in these passageways. The air is thick with the smell of goblins and Kobalds.");
+            Room room18 = new Room(18, "Deeper into the Cave", "The path leads you deeper you hear the chatter of Goblins all about you");
+            Room room19 = new Room(19, "A hoard of Treasure", "Gold and treasure lay in piles about this room, was it once a hord of a dragon or is this just generations of treasure pillaging from the goblins. You see an edge of a handle that seems out of place here. ");
             #endregion
 
             #region Room1

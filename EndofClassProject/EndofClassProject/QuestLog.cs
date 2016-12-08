@@ -25,8 +25,31 @@ namespace EndofClassProject
             foreach(Quest val in quest)
             {
                 questLogListBox.Items.Add(val.questName);
+                val.checkQuest();
+                
             }
-            
+            if (questLogListBox.SelectedIndex == 0)
+            {
+                if (quest[0].state.Equals(1))
+                {
+                    questLogTextBox.Text = quest[0].description;
+                }
+                else
+                {
+                    questLogTextBox.Text = "I don't have that Quest yet";
+                }
+            }
+            else if (questLogListBox.SelectedIndex == 1)
+            {
+                 if (quest[1].state.Equals(1))
+                {
+                    questLogTextBox.Text = quest[1].description;
+                }
+                else
+                {
+                    questLogTextBox.Text = "I don't have that Quest yet";
+                }
+            }
         }
 
         private void returnButton_Click(object sender, EventArgs e)
