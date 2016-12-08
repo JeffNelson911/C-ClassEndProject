@@ -10,7 +10,7 @@ namespace EndofClassProject
     {
 
         private List<Item> inventory = new List<Item>();
-        private string[] prompts = {"The flower is found in the Forest Grove","It is said to be a lovely shade of crimson", "It is protected by a Witch and her wolf." };
+        private string[] prompts = { "The flower is found in the Forest Grove", "It is said to be a lovely shade of crimson", "It is protected by a Witch and her wolf." };
         public FlowerQuest()
         {
             questName = "Retrieve the Crysantheum";
@@ -82,16 +82,16 @@ namespace EndofClassProject
 
         public string displayPrompt(string key)
         {
-            switch(key)
+            switch (key)
             {
                 case "flower":
-                  prompt +=" He pauses then says \""  + prompts[0] + " now be off with you\"";
+                    prompt += " He pauses then says \"" + prompts[0] + " now be off with you\"";
                     break;
                 case "crysantheum":
-                     prompt ="Merlin strokes his beard in thought then replies \" " + prompts[1] + " if I am not mistaken \" he looks at you then asks \" is there anything else?\" ";
+                    prompt = "Merlin strokes his beard in thought then replies \" " + prompts[1] + " if I am not mistaken \" he looks at you then asks \" is there anything else?\" ";
                     break;
                 case "guarding":
-                     prompt = "Merlin looks deep into your eyes as he says \" " + prompts[2] + "\" Take care Hero it will not be an easy fight\"" ;
+                    prompt = "Merlin looks deep into your eyes as he says \" " + prompts[2] + "\" Take care Hero it will not be an easy fight\"";
                     break;
             }
             return prompt;

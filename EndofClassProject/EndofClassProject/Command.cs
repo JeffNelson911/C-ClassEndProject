@@ -140,32 +140,63 @@ namespace EndofClassProject
 
             action = act;
 
-            Creature x;
+
 
             foreach (Creature z in world.worldList[Player.Location].mobList)
             {
-                if (z.Name == actor)
+                if (z.Name.ToLower() == actor)
                 {
-                    x = z;
+                    switch (action)
+                    {
+                        case "flower":
+                            post = flower.displayPrompt("flower");
+                            break;
+                        case "blade":
+                            post = "I know about the blade";
+                            break;
+                        case "type":
+                            post = flower.displayPrompt("crysantheum");
+                            break;
+                        case "guarding":
+                            post = flower.displayPrompt("guarding");
+                            break;
+
+                    }
+
                     break;
                 }
                 else if (z.accessName.Contains(actor))
                 {
-                    x = z;
+                    switch (action)
+                    {
+                        case "flower":
+                            post = flower.displayPrompt("flower");
+                            break;
+                        case "blade":
+                            post = "I know about the blade";
+                            break;
+                        case "type":
+                            post = flower.displayPrompt("crysantheum");
+                            break;
+                        case "guarding":
+                            post = flower.displayPrompt("guarding");
+                            break;
+
+                    }
                     break;
                 }
             }
 
-            switch (action)
-            {
-                case "flower":
-                    post = flower.displayPrompt("flower");
-                    break;
-                case "blade":
-                    post = "I know about the blade";
-                    break;
+            //switch (action)
+            //{
+            //    case "flower":
+            //        post = flower.displayPrompt("flower");
+            //        break;
+            //    case "blade":
+            //        post = "I know about the blade";
+            //        break;
 
-            }
+            //}
 
             return post;
         }

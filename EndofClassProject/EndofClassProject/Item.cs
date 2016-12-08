@@ -21,6 +21,8 @@ namespace EndofClassProject
             Effect = "None";
             durability = 1;
         }
+
+        //This will make the item use it's effeect.
         public string UseEffect()
         {
             string i = "";
