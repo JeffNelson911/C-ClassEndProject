@@ -508,23 +508,22 @@ namespace EndofClassProject
         //}
         public string Inventory()
         {
-            string inventory = "";
+            string inventory = "You are holding these items:\n";
 
-            if(Player.Inventory.Count != 0)
+            if(Player.Inventory != null)
             {
                 foreach (Item val in Player.Inventory)
                 {
-                    inventory += "\n " + val.Name;
+                    inventory += val.Name + "\n ";
                 }
             }
             else
             {
                 inventory = "\nYou have nothing in your inventory";
             }
-
-
             return inventory;
         }
+
         public string Score()
         {
             string score = "";
