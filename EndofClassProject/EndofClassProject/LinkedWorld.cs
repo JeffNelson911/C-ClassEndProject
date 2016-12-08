@@ -204,6 +204,10 @@ namespace EndofClassProject
 
 
             Creature wizard = new Creature();
+            Item flower = new Item();
+            flower.Name = "A rare crysantheum flower";
+            flower.accessName.Add("crysantheum");
+            flower.accessName.Add("flower");
             wizard.Name = "Wizard Merlin";
             wizard.accessName.Add("merlin");
 
