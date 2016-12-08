@@ -61,25 +61,25 @@ namespace EndofClassProject
         }
 
         //      Extra Stuff
-        //    public bool hasGiven()
-        //    {
-        //        bool given = false;
-        //        Item placeholder = null;
-        //        foreach (Item val in Player.Inventory)
-        //        {
-        //            if (val.Name.Equals("crysantheum"))
-        //            {
-        //                placeholder = val;
-        //                break;
-        //            }
-        //        }
-        //        if (placeholder != null)
-        //        {
-        //            given = true;
-        //        }
-        //        return given;
-        //    }
-        //}
+        public bool hasGiven()
+        {
+            bool given = false;
+            Item placeholder = null;
+            foreach (Item val in Player.Inventory)
+            {
+                if (val.Name.Equals("crysantheum"))
+                {
+                    placeholder = val;
+                    break;
+                }
+            }
+            if (placeholder != null)
+            {
+                given = true;
+            }
+            return given;
+        }
+
 
         public string displayPrompt(string key)
         {
