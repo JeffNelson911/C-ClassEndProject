@@ -13,7 +13,7 @@ namespace EndofClassProject
         public LinkedWorld world = new LinkedWorld();
         BladeQuest blade;
         FlowerQuest flower;
-        Command()
+        public Command()
         {
             flower = new FlowerQuest();
             blade = new BladeQuest();
@@ -90,6 +90,9 @@ namespace EndofClassProject
 
                     case "open":
                         //post = Open(action);
+                        break;
+                    case "attack":
+                        post = Attack();
                         break;
                 }
             }
@@ -348,14 +351,14 @@ namespace EndofClassProject
 
             return drop;
         }
-        public string Open()
-        {
-            string open = "";
+        //public string Open()
+        //{
+        //    string open = "";
 
 
 
-            return open;
-        }
+        //    return open;
+        //}
         public string Inventory()
         {
             string inventory = "";
