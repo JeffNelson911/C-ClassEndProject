@@ -17,6 +17,7 @@ namespace EndofClassProject
     public class LinkedWorld
     {
         public List<Room> worldList = new List<Room>();
+        
         //public List<Quest> questList = new List<Quest>();
         public LinkedWorld()
         {
@@ -44,6 +45,12 @@ namespace EndofClassProject
             worldList.Add(room1);
             worldList.Add(room2);
             worldList.Add(room3);
+
+            Creature wizard = new Creature();
+            wizard.Name = "Wizard Merlin";
+            wizard.accessName.Add("merlin");
+
+            room1.mobList.Add(wizard);
 
             
         }
