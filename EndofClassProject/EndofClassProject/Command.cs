@@ -16,6 +16,7 @@ namespace EndofClassProject
         public Command()
         {
             flower = new FlowerQuest();
+            flower.setQuestGiver("wizard");
             blade = new BladeQuest();
         }
 
@@ -92,7 +93,7 @@ namespace EndofClassProject
                         //post = Open(action);
                         break;
                     case "attack":
-                        post = Attack();
+                      //  post = Attack();
                         break;
                 }
             }
@@ -107,7 +108,7 @@ namespace EndofClassProject
                 switch (verb)
                 {
                     case "ask":
-                        //post = QuestHandler("ask", npc, action);
+                        post = QuestHandler("ask", npc, action);
                         
                         break;
                 }
@@ -120,6 +121,7 @@ namespace EndofClassProject
 
             return post;
         }
+
 
         public string QuestHandler(string v, string npc, string act)
         {
@@ -136,32 +138,63 @@ namespace EndofClassProject
 
             action = act;
 
-            Creature x;
+          
 
             foreach (Creature z in world.worldList[Player.Location].mobList)
             {
-                if (z.Name == actor)
+                if (z.Name.ToLower() == actor)
                 {
-                    x = z;
+                    switch (action)
+                    {
+                        case "flower":
+                            post = flower.displayPrompt("flower");
+                            break;
+                        case "blade":
+                            post = "I know about the blade";
+                            break;
+                        case "type":
+                            post = flower.displayPrompt("crysantheum");
+                            break;
+                        case "guarding":
+                            post = flower.displayPrompt("guarding");
+                            break;
+
+                    }
+
                     break;
                 }
                 else if (z.accessName.Contains(actor))
                 {
-                    x = z;
+                    switch (action)
+                    {
+                        case "flower":
+                            post = flower.displayPrompt("flower");
+                            break;
+                        case "blade":
+                            post = "I know about the blade";
+                            break;
+                        case "type":
+                            post = flower.displayPrompt("crysantheum");
+                            break;
+                        case "guarding":
+                            post = flower.displayPrompt("guarding");
+                            break;
+
+                    }
                     break;
                 }
             }
 
-            switch (action)
-            {
-                case "flower":
-                    post = flower.displayPrompt("flower");
-                    break;
-                case "blade":
-                    post = "I know about the blade";
-                    break;
+            //switch (action)
+            //{
+            //    case "flower":
+            //        post = flower.displayPrompt("flower");
+            //        break;
+            //    case "blade":
+            //        post = "I know about the blade";
+            //        break;
 
-            }
+            //}
 
             return post;
         }

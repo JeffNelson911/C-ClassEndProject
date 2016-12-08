@@ -20,7 +20,7 @@ namespace EndofClassProject
             keywords[2] = "guarding";
             description = "We need the rare Crysantheum flower for reason.";
             qId = 1;
-            prompt = "We need the Crysantheum flower. It is said to be a miracle cure that can solve anything. Can you find it for me?";
+            prompt = " Merlin says \" We need the Crysantheum flower. It is said to be a miracle cure that can solve anything. Can you find it for me?\" ";
             state = 0;
         }
 
@@ -85,16 +85,20 @@ namespace EndofClassProject
             switch(key)
             {
                 case "flower":
-                    string prompt = prompts[0];
+                  prompt +=" He pauses then says \""  + prompts[0] + " now be off with you\"";
                     break;
                 case "crysantheum":
-                     prompt = prompts[1];
+                     prompt ="Merlin strokes his beard in thought then replies \" " + prompts[1] + " if I am not mistaken \" he looks at you then asks \" is there anything else?\" ";
                     break;
                 case "guarding":
-                     prompt = prompts[2];
+                     prompt = "Merlin looks deep into your eyes as he says \" " + prompts[2] + "\" Take care Hero it will not be an easy fight\"" ;
                     break;
             }
             return prompt;
+        }
+        public void setQuestGiver(string s)
+        {
+            questGiver = s;
         }
     }
 }
