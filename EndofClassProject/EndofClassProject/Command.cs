@@ -223,7 +223,7 @@ namespace EndofClassProject
             {
                 result = "You deal ";
                 result += combat.PlayerCombat(placeholder) + " damage to the " + placeholder.Name;
-                if(placeholder.HP == 0)
+                if(placeholder.HP <= 0)
                 {
                     world.worldList[Player.Location].checkDeaths();
                     result += "\nYou've slain the " + placeholder.Name;
