@@ -55,6 +55,9 @@ namespace EndofClassProject
             //this will update the equipment labels every tick.
             playerWeaponLabel.Text = Player.Weapon.Name.ToString();
             playerArmorLabel.Text = Player.Armor.Name.ToString();
+
+            //This will update the room name constantly.
+            roomNameLabel.Text = com.world.worldList[Player.Location].rName;
         }
     }
 }

@@ -14,7 +14,6 @@ namespace EndofClassProject
         public string rDesc { get; set; }
 
         //trying something new here. These are the directions in the game.
-
         public Room north,south, east, west = null;
         public Room northeast, northwest, southeast, southwest = null;
         public Room up, down = null;

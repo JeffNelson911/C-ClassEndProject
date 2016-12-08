@@ -50,10 +50,6 @@
             this.defenseLabel = new System.Windows.Forms.Label();
             this.attackLabel = new System.Windows.Forms.Label();
             this.hpLabel = new System.Windows.Forms.Label();
-            this.InventoryGroupbox = new System.Windows.Forms.GroupBox();
-            this.playerItemListBox = new System.Windows.Forms.ListBox();
-            this.roomGroupbox = new System.Windows.Forms.GroupBox();
-            this.roomItemListBox = new System.Windows.Forms.ListBox();
             this.roomNameLabel = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.questLogButton = new System.Windows.Forms.Button();
@@ -62,8 +58,6 @@
             this.combatGroupbox.SuspendLayout();
             this.equipmentGroupbox.SuspendLayout();
             this.playerGroupbox.SuspendLayout();
-            this.InventoryGroupbox.SuspendLayout();
-            this.roomGroupbox.SuspendLayout();
             this.SuspendLayout();
             // 
             // submitButton
@@ -109,11 +103,9 @@
             // 
             this.combatGroupbox.Controls.Add(this.equipmentGroupbox);
             this.combatGroupbox.Controls.Add(this.playerGroupbox);
-            this.combatGroupbox.Controls.Add(this.InventoryGroupbox);
-            this.combatGroupbox.Controls.Add(this.roomGroupbox);
             this.combatGroupbox.Location = new System.Drawing.Point(595, 38);
             this.combatGroupbox.Name = "combatGroupbox";
-            this.combatGroupbox.Size = new System.Drawing.Size(420, 311);
+            this.combatGroupbox.Size = new System.Drawing.Size(219, 311);
             this.combatGroupbox.TabIndex = 12;
             this.combatGroupbox.TabStop = false;
             this.combatGroupbox.Text = "Combat";
@@ -126,7 +118,7 @@
             this.equipmentGroupbox.Controls.Add(this.weaponLabel);
             this.equipmentGroupbox.Location = new System.Drawing.Point(6, 178);
             this.equipmentGroupbox.Name = "equipmentGroupbox";
-            this.equipmentGroupbox.Size = new System.Drawing.Size(187, 118);
+            this.equipmentGroupbox.Size = new System.Drawing.Size(198, 118);
             this.equipmentGroupbox.TabIndex = 1;
             this.equipmentGroupbox.TabStop = false;
             this.equipmentGroupbox.Text = "Equipment";
@@ -276,50 +268,12 @@
             this.hpLabel.TabIndex = 0;
             this.hpLabel.Text = "HP:";
             // 
-            // InventoryGroupbox
-            // 
-            this.InventoryGroupbox.Controls.Add(this.playerItemListBox);
-            this.InventoryGroupbox.Location = new System.Drawing.Point(209, 19);
-            this.InventoryGroupbox.Name = "InventoryGroupbox";
-            this.InventoryGroupbox.Size = new System.Drawing.Size(192, 150);
-            this.InventoryGroupbox.TabIndex = 4;
-            this.InventoryGroupbox.TabStop = false;
-            this.InventoryGroupbox.Text = "Inventory";
-            // 
-            // playerItemListBox
-            // 
-            this.playerItemListBox.FormattingEnabled = true;
-            this.playerItemListBox.Location = new System.Drawing.Point(6, 17);
-            this.playerItemListBox.Name = "playerItemListBox";
-            this.playerItemListBox.Size = new System.Drawing.Size(180, 121);
-            this.playerItemListBox.Sorted = true;
-            this.playerItemListBox.TabIndex = 0;
-            // 
-            // roomGroupbox
-            // 
-            this.roomGroupbox.Controls.Add(this.roomItemListBox);
-            this.roomGroupbox.Location = new System.Drawing.Point(209, 178);
-            this.roomGroupbox.Name = "roomGroupbox";
-            this.roomGroupbox.Size = new System.Drawing.Size(198, 118);
-            this.roomGroupbox.TabIndex = 2;
-            this.roomGroupbox.TabStop = false;
-            this.roomGroupbox.Text = "Items in Room";
-            // 
-            // roomItemListBox
-            // 
-            this.roomItemListBox.FormattingEnabled = true;
-            this.roomItemListBox.Location = new System.Drawing.Point(6, 23);
-            this.roomItemListBox.Name = "roomItemListBox";
-            this.roomItemListBox.Size = new System.Drawing.Size(180, 82);
-            this.roomItemListBox.Sorted = true;
-            this.roomItemListBox.TabIndex = 0;
-            // 
             // roomNameLabel
             // 
             this.roomNameLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.roomNameLabel.Location = new System.Drawing.Point(59, 12);
             this.roomNameLabel.Name = "roomNameLabel";
-            this.roomNameLabel.Size = new System.Drawing.Size(101, 21);
+            this.roomNameLabel.Size = new System.Drawing.Size(216, 21);
             this.roomNameLabel.TabIndex = 11;
             this.roomNameLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -334,7 +288,7 @@
             // 
             // questLogButton
             // 
-            this.questLogButton.Location = new System.Drawing.Point(181, 11);
+            this.questLogButton.Location = new System.Drawing.Point(295, 11);
             this.questLogButton.Name = "questLogButton";
             this.questLogButton.Size = new System.Drawing.Size(75, 23);
             this.questLogButton.TabIndex = 16;
@@ -353,7 +307,7 @@
             this.AcceptButton = this.submitButton;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1022, 457);
+            this.ClientSize = new System.Drawing.Size(833, 457);
             this.Controls.Add(this.questLogButton);
             this.Controls.Add(this.submitButton);
             this.Controls.Add(this.commandTextBox);
@@ -362,15 +316,13 @@
             this.Controls.Add(this.roomNameLabel);
             this.Controls.Add(this.label1);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Quest for the Vorpal Blade";
             this.combatLogGroupbox.ResumeLayout(false);
             this.combatGroupbox.ResumeLayout(false);
             this.equipmentGroupbox.ResumeLayout(false);
             this.equipmentGroupbox.PerformLayout();
             this.playerGroupbox.ResumeLayout(false);
             this.playerGroupbox.PerformLayout();
-            this.InventoryGroupbox.ResumeLayout(false);
-            this.roomGroupbox.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -399,10 +351,6 @@
         private System.Windows.Forms.Label defenseLabel;
         private System.Windows.Forms.Label attackLabel;
         private System.Windows.Forms.Label hpLabel;
-        private System.Windows.Forms.GroupBox InventoryGroupbox;
-        private System.Windows.Forms.ListBox playerItemListBox;
-        private System.Windows.Forms.GroupBox roomGroupbox;
-        private System.Windows.Forms.ListBox roomItemListBox;
         private System.Windows.Forms.Label roomNameLabel;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button questLogButton;

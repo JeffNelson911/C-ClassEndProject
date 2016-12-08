@@ -38,90 +38,160 @@ namespace EndofClassProject
              placeholder = cleanupInput.Split(delim, StringSplitOptions.RemoveEmptyEntries);//split the string into the string array by the delimiter, remove empty entries
 
             //Take the verb and the 'action' and set them into separate roles. I could do it with just the array, but this will be easier on the eyes.
-            verb = placeholder[0];
-
-            if (placeholder.Length == 1)
+            if (placeholder.Length != 0)
             {
-                Console.WriteLine(verb);
+                verb = placeholder[0];
 
-                switch (verb)
+                if (placeholder.Length == 1)
                 {
-                    case "look":
-                        post = Look();
-                        break;
+                    Console.WriteLine(verb);
 
-                    case "i":
-                        post = Inventory();
-                        break;
+                    switch (verb)
+                    {
+                        case "look":
+                            post = Look();
+                            break;
 
-                    case "inventory":
-                        post = Inventory();
-                        break;
+                        case "i":
+                            post = Inventory();
+                            break;
 
-                    case "score":
-                        post = Score();
-                        break;
+                        case "inventory":
+                            post = Inventory();
+                            break;
 
-                    case "quit":
-                        post = Quit();
-                        break;
+                        case "score":
+                            post = Score();
+                            break;
+
+                        case "quit":
+                            post = Quit();
+                            break;
+
+                        #region Directions
+                        case "n":
+                            post = Go("north");
+                            break;
+
+                        case "s":
+                            post = Go("south");
+                            break;
+                        case "e":
+                            post = Go("east");
+                            break;
+                        case "w":
+                            post = Go("west");
+                            break;
+                        case "ne":
+                            post = Go("northeast");
+                            break;
+                        case "nw":
+                            post = Go("northwest");
+                            break;
+                        case "se":
+                            post = Go("southeast");
+                            break;
+                        case "sw":
+                            post = Go("southwest");
+                            break;
+                        case "u":
+                            post = Go("up");
+                            break;
+                        case "d":
+                            post = Go("down");
+                            break;
+                        case "north":
+                            post = Go("north");
+                            break;
+                        case "south":
+                            post = Go("south");
+                            break;
+                        case "east":
+                            post = Go("east");
+                            break;
+                        case "west":
+                            post = Go("west");
+                            break;
+                        case "northeast":
+                            post = Go("northeast");
+                            break;
+                        case "northwest":
+                            post = Go("northwest");
+                            break;
+                        case "southeast":
+                            post = Go("southeast");
+                            break;
+                        case "southwest":
+                            post = Go("southwest");
+                            break;
+                        case "up":
+                            post = Go("up");
+                            break;
+                        case "down":
+                            post = Go("down");
+                            break;
+                            #endregion
+                    }
                 }
-            }
-            else if (placeholder.Length == 2)
-            {
-                action = placeholder[1];
-                Console.WriteLine(verb);
-                Console.WriteLine(action);
-
-                switch (verb)
+                else if (placeholder.Length == 2)
                 {
-                    case "go":
-                        post = Go(action);
-                        Console.WriteLine("I work!");
-                        break;
+                    action = placeholder[1];
+                    Console.WriteLine(verb);
+                    Console.WriteLine(action);
 
-                    case "take":
-                        post = Take(action);
-                        break;
+                    switch (verb)
+                    {
+                        case "go":
+                            post = Go(action);
+                            break;
 
-                    case "get":
-                        post = Get(action);
-                        break;
+                        case "take":
+                            post = Take(action);
+                            break;
 
-                    case "drop":
-                        post = Drop(action);
-                        break;
+                        case "get":
+                            post = Get(action);
+                            break;
 
-                    case "open":
-                        //post = Open(action);
-                        break;
-                    case "attack":
-                        post = Attack(action);
-                        break;
+                        case "drop":
+                            post = Drop(action);
+                            break;
+
+                        case "open":
+                            //post = Open(action);
+                            break;
+                        case "attack":
+                            post = Attack(action);
+                            break;
+                    }
                 }
-            }
 
-            else if (placeholder.Length == 3)
-            {
-                //have to instantciate and make the npc variable
-                //once made you have to place the npc name there
-                string npc = placeholder[1];
-                action = placeholder[2];
-
-                switch (verb)
+                else if (placeholder.Length == 3)
                 {
-                    case "ask":
-                        post = QuestHandler("ask", npc, action);
-                        
-                        break;
+                    //have to instantciate and make the npc variable
+                    //once made you have to place the npc name there
+                    string npc = placeholder[1];
+                    action = placeholder[2];
+
+                    switch (verb)
+                    {
+                        case "ask":
+                            post = QuestHandler("ask", npc, action);
+
+                            break;
+                    }
                 }
+                else
+                {
+                    post = "Invalid command. Try again?";
+                }
+
+
             }
             else
             {
-                post = "Invalid command. Try again?";
+                post = "I need an actual command";
             }
-
-
             return post;
         }
 
